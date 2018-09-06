@@ -1,0 +1,46 @@
+include "abbreviations";
+
+place=city {name '${name}'} [0x0600 resolution 16]
+place=town {name '${name}'} [0x0700 resolution 16]
+place=village {name '${name}' } [0x0b00 resolution 18]
+place=hamlet {name '${name}' } [0x1100 resolution 24]
+place=isolated_dwelling {name '${name}' } [0x611b resolution 24]
+place=island {name '${name}'} [0x650c resolution 22]
+#place=locality {name '${name}'} [0x0c00 resolution 24]
+
+amenity=bbq|tourism=picnic_site [0x4a00 resolution 22 default_name 'Bbq']
+leisure=firepit & access=official [0x4a00 resolution 22 default_name 'Bbq']
+leisure=firepit [0x4a00 resolution 22 default_name 'Bbq']
+
+tourism=viewpoint { name '${name}' | '${description}' } [0x5200 resolution 18]
+
+tourism=hotel|tourism=motel {name '${name}'} [0x2b01 resolution 24]
+tourism=bed_and_breakfast|tourism=guest_house|tourism=hostel {name '${name}'} [0x2b02 resolution 24]
+tourism=alpine_hut|tourism=wilderness_hut {name '${name}'} [0x2b02 resolution 20 default_name 'Hut']
+
+amenity=shelter & shelter_type~'weather_shelter|basic_hut|lean_to|picnic_shelter|rock_shelter|sun_shelter' {name '${name}'} [0x4a00 resolution 18 default_name 'R']
+
+tourism=camping|tourism=camp_site [0x2b03 resolution 18 default_name 'Camping']
+
+amenity~'biergarten|cafe|restaurant|bar|pub' {name '${name}'}  [0x4600 resolution 24 default_name 'Cafe']
+amenity=toilets [0x4e00 resolution 22 default_name 'Wc']
+amenity=drinking_water|drinking_water=yes|drinkable=yes [0x5000 resolution 22 default_name 'Eau']
+
+amenity=shower {name '${name}'} [0x4F00 resolution 22]
+
+shop~'seafood|supermarket|convenience|greengrocer|bakery|bakers|beverages' {name '${name}'} [0x2e02 resolution 24 default_name 'Shop']
+
+#amenity=bench [0x4a01 resolution 22 default_name 'B']
+
+natural=peak {name '${name}' } [0x6616 resolution 20]
+natural=volcano {name '${name}' } [0x6616 resolution 20]
+natural=cliff {name '${name}' } [0x6607 resolution 24]
+
+public_transport=platform | highway=bus_stop  {name '${ref}'} [0x2F08 resolution 24]
+
+barrier~'gate|lift_gate|swing_gate|bump_gate|bollard|block|chain' [0x0e00 resolution 24 default_name 'G']
+barrier=toll_booth [0x0e00 resolution 22 default_name 'Gp']
+
+information=guidepost { name '${name}' } [0x4c02 resolution 22 default_name 'Inf']
+
+#mkgmap:line2poi=true & mkgmap:line2poitype=mid & highway=steps [0x2810 resolution 22 default_name 'Step'] 
