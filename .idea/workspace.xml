@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="76baaef3-d929-4c6a-b7c1-914db155bb74" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Json2Overpass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Json2Overpass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OverpassApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/OverpassApi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +46,7 @@
     <session id="1714982522">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.opened" value="2" />
@@ -75,10 +73,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="py" value="168" />
+          <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="PLAIN_TEXT" value="11" />
           <entry key="Python" value="168" />
         </counts>
       </usages-collector>
@@ -89,7 +89,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Json2Overpass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="647">
               <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="33" />
               <folding>
                 <marker date="1536302433116" expanded="true" signature="642:756" ph="..." />
@@ -329,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536067201540</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="minor">
+      <created>1536302923035</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1536302923036</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -340,7 +347,7 @@
       <window_info id="Favorites" order="2" sideWeight="0.43144774" side_tool="true" weight="0.11985216" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989354" weight="0.32286555" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.30362388" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.30362388" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49964514" weight="0.2575906" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -388,7 +395,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial version" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial version" />
+    <MESSAGE value="minor" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -468,7 +476,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Json2Overpass.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="647">
           <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="33" />
           <folding>
             <marker date="1536302433116" expanded="true" signature="642:756" ph="..." />
