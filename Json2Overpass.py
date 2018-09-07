@@ -36,8 +36,8 @@ def createLineString(fileName):
             if len(lst) == 4:
                 R.append('&bbox={}'.format(','.join(['{0:.5f}'.format(x) for x in lst])))
             else:
-                R.append('{}'.format(','.join(['{0:.5f}'.format(x) for x in lst])))
-                R.append('{}'.format(','.join(['{0:.5f}'.format(x) for x in swapList(lst)])))
+                R.append('[lng, lat]={}'.format(','.join(['{0:.5f}'.format(x) for x in lst])))
+                R.append('[lat, lng]={}'.format(','.join(['{0:.5f}'.format(x) for x in swapList(lst)])))
     return R
 
 def createPoints(fileName):
@@ -52,7 +52,7 @@ def createPoints(fileName):
             lst = []
             for coordinates in feature['geometry']['coordinates']:
                 lst.append(coordinates)
-            R.append('{}={}'.format(n, ','.join(['{0:.5f}'.format(x) for x in swapList(lst)])))
+            R.append('[lat, lng]={}={}'.format(n, ','.join(['{0:.5f}'.format(x) for x in swapList(lst)])))
     return R
 
 if __name__ == '__main__':

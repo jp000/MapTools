@@ -61,6 +61,9 @@ def polySimpleTest():
     '''
     GetUrl(urlFmt.format(poly), 'Elba.osm')
 
+def boundingSimpleTest():
+    getBox(42.73,10.25,42.82,10.34, 'Elba1.osm')
+
 def areaIntersectionTest():
     q = '''
         (
@@ -89,5 +92,5 @@ def compareTest():
     GetUrl(f, 'AA2.osm')
 
 if __name__ == '__main__':
-    areaIntersectionTest()
+    boundingSimpleTest()
 
