@@ -9,12 +9,15 @@ def createPolyNone(fileName):
     J = json.load(open(f, 'r'), encoding='utf-8')
     for feature in J['features']:
         if feature['geometry']['type'] == 'Polygon':
+            n = ''
+            if 'role' in feature['properties']:
+                n = feature['properties']['role']
             for coordinates in feature['geometry']['coordinates']:
                 poly = []
                 for lng, lat in coordinates:
                     poly.append(float(lat))
                     poly.append(float(lng))
-                R.append('node(poly:"{}");'.format(' '.join(['{0:.5f}'.format(x) for x in poly])))
+                R.append('{}:node(poly:"{}");'.format(n, ' '.join(['{0:.5f}'.format(x) for x in poly])))
     return R
 
 def swapList(lst):
@@ -30,14 +33,17 @@ def createLineString(fileName):
     J = json.load(open(f, 'r'), encoding='utf-8')
     for feature in J['features']:
         if feature['geometry']['type'] == 'LineString':
+            n = ''
+            if 'name' in feature['properties']:
+                n = feature['properties']['name']
             lst = []
             for coordinates in feature['geometry']['coordinates']:
                 lst.extend(coordinates)
             if len(lst) == 4:
-                R.append('&bbox={}'.format(','.join(['{0:.5f}'.format(x) for x in lst])))
+                R.append('{}:&bbox={}'.format(n,','.join(['{0:.5f}'.format(x) for x in lst])))
             else:
-                R.append('[lng, lat]={}'.format(','.join(['{0:.5f}'.format(x) for x in lst])))
-                R.append('[lat, lng]={}'.format(','.join(['{0:.5f}'.format(x) for x in swapList(lst)])))
+                R.append('{}:[lng, lat]={}'.format(n, ','.join(['{0:.5f}'.format(x) for x in lst])))
+                R.append('{}:[lat, lng]={}'.format(n, ','.join(['{0:.5f}'.format(x) for x in swapList(lst)])))
     return R
 
 def createPoints(fileName):
@@ -52,7 +58,7 @@ def createPoints(fileName):
             lst = []
             for coordinates in feature['geometry']['coordinates']:
                 lst.append(coordinates)
-            R.append('[lat, lng]={}={}'.format(n, ','.join(['{0:.5f}'.format(x) for x in swapList(lst)])))
+            R.append('{}:[lat, lng]={}'.format(n, ','.join(['{0:.5f}'.format(x) for x in swapList(lst)])))
     return R
 
 if __name__ == '__main__':
