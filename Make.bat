@@ -16,7 +16,7 @@ set outDir=.\output\%~n1
 
 del %outDir%\*.pbf
 
-java -Xmx6000m -jar "%splitter%" --max-nodes=%maxnodes% --output-dir=%outDir% "%1"
+java -Xmx6000m -jar "%splitter%" --max-nodes=%maxnodes% --output-dir=%outDir% "%~1"
 
 del "%outDir%\*.img"
 FOR %%I IN ("%outDir%\*.pbf") DO  (

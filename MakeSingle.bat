@@ -16,7 +16,7 @@ set outDir=.\output\%~n1
 @set splitter=%rootDir%\splitter\splitter.jar
 
 @del "%outDir%\*.img"
-java -Xmx6000m -jar "%mkgmap%" --style-file="%2" --gmapsupp %options% --family-id=%family% --product-id=%product% --output-dir="%outDir%" "%1" "%typFile%"
+java -Xmx6000m -jar "%mkgmap%" --style-file="%2" --gmapsupp %options% --family-id=%family% --product-id=%product% --output-dir="%outDir%" "%~1" "%typFile%"
 @if not exist "%outDir%%subdir%" mkdir "%outDir%%subdir%
 copy /B "%outDir%\gmapsupp.img" "%outDir%%subdir%\gmapbmap.img"
 goto done
