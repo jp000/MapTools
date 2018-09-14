@@ -56,19 +56,21 @@ Here is a simple example to get a map of island of Elba
 Have a look at OverpassApi.py for other variants
 ## Batch files ##
 ### MakeSingle.bat ###
-Create a single map (gmapbmap) from an .osm input file  
+Create a single map (gmapbmap.jar) from an .osm input file and style directory  
 `MakeSingle.bat "file_to_process(.osm)" "style_direcory"`
 ### Make.bat ###
-Create a multiple map (gmapbmap) from an .osm input file, the input file is split first  
+Create a multiple map (splitter.jar and gmapbmap.jar) from an .osm input file and style directory, the input file is split first  
 `Make.bat "file_to_process(.osm)" "style_direcory"`
 # Scripts #
 Those scripts are by no mean fully fledged applications, just quick&dirty code to get the job done. They can be hacked and adapted to automate repetitive processes, like regenerating the data for a map every so often.
 ## Osm2Gpx.py ##
 Create a gpx file given a relation number.
 This can be used by the script bbbikeExtract.py to create bounding boxes
-## bbbikeExtract.py ##
+## BbbikeExtract.py ##
 Given a gpx file, find all bounding boxes of a given surface
 The output can be be passed to the site `extract.bbbike.org`
+## OverpassApi.py ##
+This contains functions to get data from `overpass-api.de/api` with samples of different methods.
 ## Json2Overpass.py ##
 This will extract polygons defined in geojson format from **geojson.io** in a format suitable for Overpass API  
 It will also output lines and points coordinates in different formats, to paste into your queries.
@@ -82,7 +84,4 @@ Example:
 This will give you an **18MB** of data
  
 When you use the MakeSingle.Bat file, you will get a **282KB** file (gmapbmap) that can be copyied to your Etrex10 device.
- 
-## OverpassApi.py ##
-This contains functions to get data from `http://overpass-api.de/api` with samples
 
