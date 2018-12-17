@@ -81,6 +81,9 @@ def poly_1():
 def boundingSimpleTest():
     getBox(42.73,10.25,42.82,10.34, 'Elba1.osm')
 
+def getAreaWithBoundingBox():
+    b = '&bbox=114.41162,-8.87964,116.12823,-8.02388'
+
 def areaIntersectionTest():
     q = '''
         (
