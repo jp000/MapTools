@@ -35,7 +35,10 @@ highway=* { set short_name = '${short_name|subst:Weg$~>W|subst:weg$~>w}' }
 highway=* { set short_name = '${short_name|subst:Gasse$~>G|subst:gasse$~>g}' }
 
 # Italian abbreviation rules
-highway=* { set short_name = '${short_name|subst:^Via ~>V }' }
+highway=* { set short_name = '${short_name|subst:^(?i)Via ~>V }' }
+highway=* { set short_name = '${short_name|subst:^(?i)Strada ~>St }' }
+highway=* { set short_name = '${short_name|subst:^(?i)Corso ~>Co }' }
+highway=* { set short_name = '${short_name|subst:^(?i)Salita ~>Sal }' }
 
 # Spanish abbreviation rules
 highway=* { set short_name = '${short_name|subst:^(?i)calle ~>C }' }

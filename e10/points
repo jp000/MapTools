@@ -14,21 +14,21 @@ leisure=firepit [0x4a00 resolution 22 default_name 'Bbq']
 
 tourism=viewpoint { name '${name}' | '${description}' } [0x5200 resolution 18]
 
-tourism=hotel|tourism=motel {name '${name}'} [0x2b01 resolution 22]
-tourism=bed_and_breakfast|tourism=guest_house|tourism=hostel {name '${name}'} [0x2b02 resolution 24]
-tourism=alpine_hut|tourism=wilderness_hut {name '${name}'} [0x2b02 resolution 20 default_name 'Hut']
+tourism=hotel|tourism=motel {name '${name}' | '${tourism}'} [0x2b01 resolution 22]
+tourism=bed_and_breakfast|tourism=guest_house|tourism=hostel {name '${name}' | '${tourism}'} [0x2b02 resolution 24]
+tourism=alpine_hut|tourism=wilderness_hut {name '${name}' | '${tourism}'} [0x2b02 resolution 20 default_name 'Hut']
 
-amenity=shelter & shelter_type~'weather_shelter|basic_hut|lean_to|picnic_shelter|rock_shelter|sun_shelter' {name '${name}'} [0x4a00 resolution 18 default_name 'R']
+amenity=shelter & shelter_type~'weather_shelter|basic_hut|lean_to|picnic_shelter|rock_shelter|sun_shelter' {name '${name}' | '${shelter_type}'} [0x4a00 resolution 18 default_name 'R']
 
 tourism=camping|tourism=camp_site [0x2b03 resolution 18 default_name 'Camping']
 
-amenity~'biergarten|cafe|restaurant|bar|pub' {name '${name}'}  [0x4600 resolution 24 default_name 'pub']
+amenity~'biergarten|cafe|restaurant|bar|pub' {name '${name}' | '${amenity}'}  [0x4600 resolution 24 default_name 'pub']
 amenity=toilets [0x4e00 resolution 22 default_name 'Wc']
 amenity=drinking_water|drinking_water=yes|drinkable=yes [0x5000 resolution 22 default_name 'Eau']
 
-amenity=shower {name '${name}'} [0x4F00 resolution 22]
+amenity=shower {name '${name}' | '${amenity}'} [0x4F00 resolution 22]
 
-shop~'seafood|supermarket|convenience|greengrocer|bakery|bakers|beverages' {name '${name}'} [0x2e02 resolution 24 default_name 'Shop']
+shop~'seafood|supermarket|convenience|greengrocer|bakery|bakers|beverages' {name '${name}' | '${shop}'} [0x2e02 resolution 24 default_name 'Shop']
 
 #amenity=bench [0x4a01 resolution 22 default_name 'B']
 
@@ -41,6 +41,6 @@ public_transport=platform | highway=bus_stop  {name '${ref}'} [0x2F08 resolution
 #barrier~'gate|lift_gate|swing_gate|bump_gate|bollard|block|chain' [0x0e00 resolution 24 default_name 'G']
 barrier=toll_booth [0x0e00 resolution 22 default_name 'G']
 
-information=guidepost { name '${name}' } [0x4c02 resolution 22 default_name 'i']
+information=guidepost { name '${name}' } [0x4c00 resolution 22 default_name 'i']
 
 #mkgmap:line2poi=true & mkgmap:line2poitype=mid & highway=steps [0x2810 resolution 22 default_name 'Step'] 

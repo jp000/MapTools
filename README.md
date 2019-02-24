@@ -20,6 +20,7 @@ Given the following file structure
 - [www.gpsies.com](https://www.gpsies.com) `=> draw tracks and download gpx files`
 - [inkatlas.com](https://inkatlas.com) `=> print maps`
 - [geojson.io](http://geojson.io) `=> nice drawing on maps and download geojson files (for polygons, lines and points)`
+- [POILoaderforWindows](https://www8.garmin.com/support/download_details.jsp?id=927) `=> copy pois to the garmin`
 # Etrex 10 #
 This is the low end Garmin GPS device with very limited ressources. Some say it is too basic, but given the right tools it can be a marvel and it has very good battery life!   
 The idea is to have a map as large as possible with a minimal number of features required for your activity.  
