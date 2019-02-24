@@ -75,6 +75,6 @@ if __name__ == '__main__':
 
     if len(sys.argv) > 1:
         f = sys.argv[1]
-        J1 = json.load(open(f, 'r'), encoding='utf-8', object_hook=lambda d: Namespace(**d))
+        J1 = json.load(open(f, 'r', encoding='utf-8'), encoding='utf-8', object_hook=lambda d: Namespace(**d))
         for entry in processData(J1):
             print(entry)
