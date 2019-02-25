@@ -53,15 +53,19 @@ Here is a simple example to get a map of island of Elba
     ... or ...
     wget -O elba.osm "http://overpass-api.de/api/interpreter?data=[out:xml];(area[name=\"Isola d'Elba\"][place=island];)->.x;(node(area.x);<;way(area.x);<;relation(area.x);<<;);out body;"
     java -Xmx6000m -jar ".\mkgmap\mkgmap.jar" --style-file=".\e10" --gmapsupp --latin1 --add-pois-to-lines --add-pois-to-areas --check-styles --family-id=1000 --product-id=1 --output-dir=".\output\Elba" ".\Elba.osm" ".\e10\e10.txt"  
-    copy /B ".\output\Elba\gmapsupp.img" ".\output\Elba\gmapbmap.img"  
-Have a look at OverpassApi.py for other variants
+    copy /B ".\output\Elba\gmapsupp.img" ".\output\Elba\gmapbmap.img"
+    
+Have a look at OverpassApi.py for other variants or the documentation of the OverPassApi
 ## Batch files ##
 ### MakeSingle.bat ###
-Create a single map (gmapbmap.jar) from an .osm input file and style directory  
+Create a single map (gmapbmap.img) from an .osm input file and style directory  
 `MakeSingle.bat "file_to_process(.osm)" "style_direcory"`
 ### Make.bat ###
 Create a multiple map (splitter.jar and gmapbmap.jar) from an .osm input file and style directory, the input file is split first  
 `Make.bat "file_to_process(.osm)" "style_direcory"`
+### Get.bat ###
+Uses the OverpassApi to fetch the data and pass it to mkgmap for rendering<br>
+Example: Get.bat Hong-Kong.dat
 # Scripts #
 Those scripts are by no mean fully fledged applications, just quick&dirty code to get the job done. They can be hacked and adapted to automate repetitive processes, like regenerating the data for a map every so often.
 ## Osm2Gpx.py ##
@@ -84,5 +88,6 @@ Example:
 - rename the output file Elba.osm"  
 This will give you an **18MB** of data
  
-When you use the MakeSingle.Bat file, you will get a **282KB** file (gmapbmap) that can be copyied to your Etrex10 device.
+When you use the MakeSingle.Bat file, you will get a **282KB** file (gmapbmap) that can be copyied to your Etrex10 device.<p>
+You can also use this script to help the creation of POI files(.gpx or .csv) to download via POILoaderforWindows
 
