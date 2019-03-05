@@ -2,9 +2,9 @@ include "abbreviations";
 
 place=city {name '${name}'} [0x0600 resolution 16]
 place=town {name '${name}'} [0x0700 resolution 16]
-place=village {name '${name}' } [0x0b00 resolution 18]
-place=hamlet {name '${name}' } [0x1100 resolution 24]
-place=isolated_dwelling {name '${name}' } [0x611b resolution 24]
+place=village {name '${name},${ele}'|'${name}'} [0x0b00 resolution 18]
+place=hamlet {name '${name},${ele}'|'${name}'} [0x1100 resolution 24]
+place=isolated_dwelling {name '${name},${ele}'|'${name}'} [0x611b resolution 24]
 place=island {name '${name}'} [0x650c resolution 18]
 #place=locality {name '${name}'} [0x0c00 resolution 24]
 

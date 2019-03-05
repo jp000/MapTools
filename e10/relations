@@ -27,10 +27,10 @@
 # Public transportation routes.
 # We could want to sort the matching relations by ref first.
 
-#(type=route & (route=bus|route=trolleybus|route=ferry|route=tram)) & (ref=* | name=*)
-(type=route & (route=bus|route=trolleybus|route=ferry|route=tram)) & (ref=*)
+(type=route & (route=bus|route=trolleybus|route=ferry|route=tram)) & (ref=* | name=*)
+#(type=route & (route=bus|route=trolleybus|route=ferry|route=tram)) & (ref=*)
 {
-#  add ref='${name}'; # if ref is missing, use name
+  add ref='${name}'; # if ref is missing, use name
   apply {
 	set route_bus='$(route_bus),${ref|not-contained:,:route_bus}' | '$(route_bus)' | '${ref}';
     set mkgmap:relref='${ref}';
@@ -41,8 +41,8 @@
   }
 }
 
-type=route & (route=hiking|route=foot) & (ref=* | name=*)
-#type=route & (route=hiking|route=foot) & (ref=*)
+#type=route & (route=hiking|route=foot) & (ref=* | name=*)
+type=route & (route=hiking|route=foot) & (ref=*)
 {
   add ref='${name}'; # if ref is missing, use name
   apply {
@@ -54,10 +54,10 @@ type=route & (route=hiking|route=foot) & (ref=* | name=*)
   }
 }
 
-#type=route & (route=bicycle|route=mtb) & (ref=* | name=*)
-type=route & (route=bicycle|route=mtb) & (ref=*)
+type=route & (route=bicycle|route=mtb) & (ref=* | name=*)
+#type=route & (route=bicycle|route=mtb) & (ref=*)
 {
-#  add ref='${name}'; # if ref is missing, use name
+  add ref='${name}'; # if ref is missing, use name
   apply {
 	set route_bik='$(route_bik),${ref|not-contained:,:route_bik}' | '$(route_bik)' | '${ref}';
     set mkgmap:relref='${ref}';
@@ -67,10 +67,12 @@ type=route & (route=bicycle|route=mtb) & (ref=*)
 }
 
 #any highway
-#type=route & route=road & historic!=yes & (ref=* | name=*)
-#{
-#    apply {
-#        add ref='${ref}';
-#		set name='$(name) ${ref}';
-#    }
-#}
+type=route & route=road & historic!=yes & (ref=* | name=*)
+{
+    add ref='${name}'; # if ref is missing, use name
+    apply {
+        add ref='${ref}';
+		set name='$(name) ${ref}';
+        #echotags 'any highway';
+    }
+}

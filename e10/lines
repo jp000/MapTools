@@ -5,11 +5,30 @@ route_bik=* {set route_bik='(${route_bik})' }
 route_hik=* {set route_hik='${route_hik}' }
 
 #this can be adapted/removed to show the relations at lower resolution
-route_hik ~ '.*(?i)(gr|e).*' {name '${route_hik}'} [0x07 road_class=0  resolution 16]
+#route_hik ~ '.*(?i)(gr|e).*' {name '${route_hik}'} [0x07 road_class=0  resolution 16]
 #route_hik ~ '(2|4)' {name '${route_hik}'} [0x07 road_class=0  resolution 16]
 
-route_bus=* { name '${route_hik},${route_bik},${route_bus}' | '${route_bik},${route_bus}' | '${route_hik},${route_bus}' | '${route_bus}'} [0x03 road_class=0  resolution 20]
-route_bus!=* & (route_hik=* | route_bik=*) {name '${route_hik},${route_bik}' | '${route_hik}' | '${route_bik}'} [0x07 road_class=0  resolution 20]
+route_bus=* {
+ name 
+    '${route_hik},${route_bik},${route_bus},${name}'
+    | '${route_hik},${route_bik},${route_bus}'
+    | '${route_bik},${route_bus},${name}'
+    | '${route_bik},${route_bus}'
+    | '${route_hik},${route_bus},${name}'
+    | '${route_hik},${route_bus}'
+    | '${route_bus},${name}'
+    | '${route_bus}'
+} [0x03 road_class=0  resolution 20]
+
+route_bus!=* & (route_hik=* | route_bik=*) {
+ name 
+    '${route_hik},${route_bik},${name}'
+    | '${route_hik},${route_bik}'
+    | '${route_hik},${name}'
+    | '${route_hik}'
+    | '${route_bik},${name}'
+    | '${route_bik}'
+} [0x07 road_class=0  resolution 20]
 
 include "abbreviations";
 
@@ -48,8 +67,8 @@ leisure=track & area!=yes {add highway=footway; name '${name} (${sport})' | '${n
 (man_made=pier | man_made=piste:halfpipe) & area!=yes {add highway=footway; name '${ref} ${name}' | '${ref}' | '${name}' }
 
 # Set highway names to include the reference if there is one
-highway=motorway {name '${ref} ${name}' | '${ref}' | '${name}' }
-highway=trunk {name '${ref} ${name}' | '${ref}' | '${name}'; add mkgmap:display_name = '${name} (${ref})' }
+#highway=motorway {name '${ref} ${name}' | '${ref}' | '${name}' }
+#highway=trunk {name '${ref} ${name}' | '${ref}' | '${name}'; add mkgmap:display_name = '${name} (${ref})' }
 #highway=primary {name '${ref|highway-symbol:box} ${name}' | '${ref|highway-symbol:box}' | '${name}'; add mkgmap:display_name = '${name} (${ref})' }
 #highway=secondary | highway=tertiary {name '${ref|highway-symbol:box} ${name}' | '${ref|highway-symbol:oval}' | '${name}'; add mkgmap:display_name = '${name} (${ref})' }
 #highway=* {name '${name}' | '${ref}' }

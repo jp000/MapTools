@@ -13,6 +13,7 @@ Given the following file structure
 ## Download and install ##
 - [mkgmap](http://www.mkgmap.org.uk/download/mkgmap.html "mkgmap") `=> Maps/mkgmap`
 - [splitter](http://www.mkgmap.org.uk/download/splitter.html "splitter") `=> Maps/splitter`
+- [wget](http://gnuwin32.sourceforge.net/packages/wget.htm) `=> somewhere on your PATH`
 ## Download maps  ##
 - [extract.bbbike.org](https://extract.bbbike.org/?lang=en "bbbike")
 - [https://garmin.openstreetmap.nl](garmin.openstreetmap.nl/)
@@ -22,7 +23,7 @@ Given the following file structure
 - [geojson.io](http://geojson.io) `=> nice drawing on maps and download geojson files (for polygons, lines and points)`
 - [POILoaderforWindows](https://www8.garmin.com/support/download_details.jsp?id=927) `=> copy pois to the garmin`
 # Etrex 10 #
-This is the low end Garmin GPS device with very limited ressources. Some say it is too basic, but given the right tools it can be a marvel and it has very good battery life!   
+This is the low end Garmin GPS device with very limited resources. Some say it is too basic, but given the right tools it can be a marvel and it has very good battery life!   
 The idea is to have a map as large as possible with a minimal number of features required for your activity.  
 The above mentioned tools will help you split and reduce the size of the map to fit in your device (max 5 to 7 MB).  
 Also reserve some memory space for route tracking and extra POI  
@@ -81,13 +82,13 @@ This will extract polygons defined in geojson format from **geojson.io** in a fo
 It will also output lines and points coordinates in different formats, to paste into your queries.
   
 Example:  
-- draw a square aroud Elba island, using `http://geojson.io`, save it as "map.geojson"  
+- draw a square around Elba island, using `http://geojson.io`, save it as "map.geojson"  
 - execute python Json2Overpass.py "map.geojson" => *node(poly:"42.70363 10.09403 42.70363 10.45383 42.87622 10.45383 42.87622 10.09403 42.70363 10.09403");*  
 - copy/paste the node info into the next line  
 - http://overpass-api.de/api/interpreter?data=[out:xml];*node(poly:"42.70363 10.09403 42.70363 10.45383 42.87622 10.45383 42.87622 10.09403 42.70363 10.09403");*( ._; <;);out body;  
 - rename the output file Elba.osm"  
 This will give you an **18MB** of data
  
-When you use the MakeSingle.Bat file, you will get a **282KB** file (gmapbmap) that can be copyied to your Etrex10 device.<p>
+When you use the MakeSingle.Bat file, you will get a **282KB** file (gmapbmap) that can be copied to your Etrex10 device.<p>
 You can also use this script to help the creation of POI files(.gpx or .csv) to download via POILoaderforWindows
 
