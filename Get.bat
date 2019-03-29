@@ -1,6 +1,8 @@
 @set sname=%~n1
 @set osmname=%sname%.osm
 @set opts=--gmapsupp --latin1 --make-poi-index --add-pois-to-lines --add-pois-to-areas --check-styles
+@set style=--style-file="..\e10"
+@if not %3. == . set style=--style=%3
 @if %2. == -f. goto wget
 @if %2. == -F. goto wget
 @if Exist %osmname% goto skipGet
@@ -11,7 +13,7 @@
 @IF %ERRORLEVEL% NEQ 0 GOTO error2
 
 :skipGet
-@java -Xmx6000m -jar "..\mkgmap\mkgmap.jar" %opts% --style-file="..\e10" --family-id=1000 --product-id=1 --output-dir=".\output\%sname%" ".\%osmname%" "..\e10\e10.txt"
+java -Xmx6000m -jar "..\mkgmap\mkgmap.jar" %opts% %style% --family-id=1000 --product-id=1 --output-dir=".\output\%sname%" ".\%osmname%" "..\e10\e10.txt"
 @if not errorlevel 0 goto error3
 @copy /B ".\output\%sname%\gmapsupp.img" ".\output\%sname%\gmapbmap.img" 
 
