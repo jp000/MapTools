@@ -6,7 +6,7 @@ from datetime import datetime
 from types import SimpleNamespace as Namespace
 
 
-def Process(filename):
+def Process(filename, full=False):
     dt = re.sub(r'\.\d+$', 'Z', datetime.utcnow().isoformat())
     filename = os.path.abspath(filename)
     geoJson = json.load(open(filename, 'r', encoding='utf-8'), object_hook=lambda d: Namespace(**d))
@@ -29,21 +29,33 @@ def Process(filename):
 
     outputName = os.path.splitext(filename)[0] + '.geojson'
     with open(outputName, 'w', encoding='utf8') as fp:
-        json.dump(GenJson(data), fp=fp, indent=2)
+        json.dump(GenJson(data, full), fp=fp, indent=2)
 
-def GenJson(data):
-    out = {
-    "type": "FeatureCollection",
-    "features": [{
-                "type": "Feature",
-                "properties": {"stroke": "red"},
-                "geometry": {
-                    "type": "LineString",
-#                    "coordinates": [(lon, lat) for lon, lat in d]
-                    "coordinates": [(d[0][0], d[0][1]),(d[-1][0], d[-1][1]) ]
-                }
-            } for d in data]
-    }
+def GenJson(data, full):
+    if full:
+        out = {
+        "type": "FeatureCollection",
+        "features": [{
+                    "type": "Feature",
+                    "properties": {"stroke": "red"},
+                    "geometry": {
+                        "type": "LineString",
+                        "coordinates": [(lon, lat) for lon, lat in d]
+                    }
+                } for d in data]
+        }
+    else:
+        out = {
+        "type": "FeatureCollection",
+        "features": [{
+                    "type": "Feature",
+                    "properties": {"stroke": "red"},
+                    "geometry": {
+                        "type": "LineString",
+                        "coordinates": [(d[0][0], d[0][1]),(d[-1][0], d[-1][1]) ]
+                    }
+                } for d in data]
+        }
     return out
 
 if __name__ == '__main__':
@@ -57,6 +69,6 @@ if __name__ == '__main__':
     '''
     import sys
     if len(sys.argv) > 1:
-        Process(sys.argv[1])
+        Process(sys.argv[1], True)
     else:
-        Process(r'c:\Usr\Maps\Tmp\GR5.osm')
+        Process(r'c:\Usr\Maps\Tmp\GR5.osm', True)

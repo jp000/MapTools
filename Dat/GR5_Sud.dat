@@ -1,0 +1,4 @@
+data=[out:xml][timeout:900][maxsize:1073741824];
+rel["name"~"GR 5", i][type=route][route=hiking](43.67085166460574,6.41326904296875,46.39998810407942,7.502288818359374);
+(>>; way(r);node(w);node(around:2000);<;); 
+out body;

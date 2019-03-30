@@ -7,6 +7,7 @@ route_hik=* {set route_hik='${route_hik}' }
 #this can be adapted/removed to show the relations at lower resolution
 #route_hik ~ '.*(?i)(gr|e).*' {name '${route_hik}'} [0x07 road_class=0  resolution 16]
 #route_hik ~ '(2|4)' {name '${route_hik}'} [0x07 road_class=0  resolution 16]
+route_hik=* {name '${route_hik}'} [0x07 road_class=0  resolution 16]
 
 route_bus=* {
  name 

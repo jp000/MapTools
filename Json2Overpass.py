@@ -42,6 +42,11 @@ def processData(geoJson):
                 description = getattr(feature.properties, 'info', '')
 
         if feature.geometry.type == 'Polygon':
+            try:
+                R.append('{}:&bbox={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in feature.geometry.bbox])))
+                R.append('{}:({})'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(feature.geometry.bbox)])))
+            except AttributeError:
+                pass
             for coordinates in feature.geometry.coordinates:
                 poly = []
                 for lng, lat in coordinates:
@@ -53,14 +58,16 @@ def processData(geoJson):
                 R.append('{}:node(poly:"{}");'.format(role, w))
 
         if feature.geometry.type == 'LineString':
+            try:
+                R.append('{}:&bbox={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in feature.geometry.bbox])))
+                R.append('{}:({})'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(feature.geometry.bbox)])))
+            except AttributeError:
+                pass
             lst = []
             for coordinates in feature.geometry.coordinates:
                 lst.extend(coordinates)
-            if len(lst) == 4:
-                R.append('{}:&bbox={}'.format(name,','.join(['{0:.5f}'.format(x) for x in lst])))
-            else:
-                R.append('{}:[lng, lat]={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in lst])))
-                R.append('{}:[lat, lng]={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(lst)])))
+            R.append('{}:[lng, lat]={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in lst])))
+            R.append('{}:[lat, lng]={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(lst)])))
 
         if feature.geometry.type== 'Point':
             lst = []

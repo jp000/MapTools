@@ -41,6 +41,6 @@ public_transport=platform | highway=bus_stop  {name '${ref}'} [0x2F08 resolution
 #barrier~'gate|lift_gate|swing_gate|bump_gate|bollard|block|chain' [0x0e00 resolution 24 default_name 'G']
 barrier=toll_booth [0x0e00 resolution 22 default_name 'G']
 
-information=guidepost { name '${name}' } [0x4c00 resolution 22 default_name 'i']
+information=guidepost & name=* { name '${name} ${ele}' | '${name}' } [0x4c00 resolution 22]
 
 #mkgmap:line2poi=true & mkgmap:line2poitype=mid & highway=steps [0x2810 resolution 22 default_name 'Step'] 
