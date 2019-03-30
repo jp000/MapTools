@@ -10,80 +10,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="613486244">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.4" value="2" />
-          <entry key="project.opened" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Python" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="py" value="508" />
-          <entry key="txt" value="15" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Python" value="508" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="1714982522">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="METADATA" value="1" />
-          <entry key="RECORD" value="1" />
-          <entry key="WHEEL" value="1" />
-          <entry key="js" value="1" />
-          <entry key="pem" value="1" />
-          <entry key="py" value="11" />
-          <entry key="txt" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="11" />
-          <entry key="Scratch" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="py" value="168" />
-          <entry key="txt" value="11" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="11" />
-          <entry key="Python" value="168" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
@@ -91,10 +17,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="647">
               <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="33" />
-              <folding>
-                <marker date="1536302433116" expanded="true" signature="642:756" ph="..." />
-                <marker date="1536302433116" expanded="true" signature="787:1991" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -102,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OverpassApi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="35" />
+            <state relative-caret-position="391">
+              <caret line="25" column="35" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -152,6 +74,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -159,20 +82,10 @@
               <item name="MapTools" type="b2602c69:ProjectViewProjectNode" />
               <item name="MapTools" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MapTools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
-            <path>
-              <item name="MapTools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="PyCharm Consoles" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -283,11 +196,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../Python36/Lib/site-packages/certifi" />
+      <option name="WORKING_DIRECTORY" value="C:/Python36/Lib/site-packages/certifi" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../Python36/Lib/site-packages/certifi/core.py" />
+      <option name="SCRIPT_NAME" value="C:/Python36/Lib/site-packages/certifi/core.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -340,7 +253,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.56855226" visible="true" weight="0.119072706" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24920802" />
@@ -389,9 +303,20 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial version" />
@@ -410,46 +335,20 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Python36/Lib/site-packages/certifi/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/../../../Python36/Lib/site-packages/certifi/cacert.pem" />
-    <entry file="file://$PROJECT_DIR$/../../../Python36/Lib/site-packages/certifi/__main__.py" />
-    <entry file="file://$PROJECT_DIR$/../../../Python36/Lib/site-packages/certifi/core.py" />
-    <entry file="file://$PROJECT_DIR$/../../../Python36/Lib/site-packages/crocs-0.0.9.dist-info/METADATA">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Python36/Lib/site-packages/crocs-0.0.9.dist-info/RECORD">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Python36/Lib/site-packages/crocs-0.0.9.dist-info/WHEEL">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Python36/Lib/site-packages/crocs-0.0.9.dist-info/top_level.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Python36/Lib/site-packages/adodbapi/examples/xls_read.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Python36/Lib/site-packages/authorization/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Python36/Lib/site-packages/axdebug/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Python36/Lib/site-packages/axcontrol/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Python36/Lib/site-packages/pylab.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.js" />
+    <entry file="file://C:/Python36/Lib/site-packages/certifi/__init__.py" />
+    <entry file="file://C:/Python36/Lib/site-packages/certifi/cacert.pem" />
+    <entry file="file://C:/Python36/Lib/site-packages/certifi/__main__.py" />
+    <entry file="file://C:/Python36/Lib/site-packages/certifi/core.py" />
+    <entry file="file://C:/Python36/Lib/site-packages/crocs-0.0.9.dist-info/METADATA" />
+    <entry file="file://C:/Python36/Lib/site-packages/crocs-0.0.9.dist-info/RECORD" />
+    <entry file="file://C:/Python36/Lib/site-packages/crocs-0.0.9.dist-info/WHEEL" />
+    <entry file="file://C:/Python36/Lib/site-packages/crocs-0.0.9.dist-info/top_level.txt" />
+    <entry file="file://C:/Python36/Lib/site-packages/adodbapi/examples/xls_read.py" />
+    <entry file="file://C:/Python36/Lib/site-packages/authorization/__init__.py" />
+    <entry file="file://C:/Python36/Lib/site-packages/axdebug/__init__.py" />
+    <entry file="file://C:/Python36/Lib/site-packages/axcontrol/__init__.py" />
+    <entry file="file://C:/Python36/Lib/site-packages/pylab.py" />
     <entry file="file://$PROJECT_DIR$/bbbikeExtract.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="936">
@@ -467,21 +366,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OverpassApi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Json2Overpass.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="647">
           <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="33" />
-          <folding>
-            <marker date="1536302433116" expanded="true" signature="642:756" ph="..." />
-            <marker date="1536302433116" expanded="true" signature="787:1991" ph="..." />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OverpassApi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="35" />
         </state>
       </provider>
     </entry>

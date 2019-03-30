@@ -1,0 +1,16 @@
+&bbox=-9.58008,35.88905,20.03906,54.21386
+
+data=[out:json];
+rel[name~"TMB"][type=route][route=hiking](35.88905,-9.58008,54.21386,20.03906);
+rel[name="GR 5 Alpes Côte d'Azur"][type=route][route=hiking](35.88905,-9.58008,54.21386,20.03906);
+
+
+data=[out:json][timeout:900][maxsize:1073741824];
+rel["name"~"GR [0-9]+", i][type=route][route=hiking](35.88905,-9.58008,54.21386,20.03906);
+rel["name"~"GR 5 ", i][type=route][route=hiking](35.88905,-9.58008,54.21386,20.03906);out body;
+
+
+way(r);
+out body;
+node(w);
+out body;

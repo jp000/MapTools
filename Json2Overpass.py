@@ -1,6 +1,8 @@
 # coding=utf-8
 from __future__ import print_function
 import json
+import textwrap
+
 
 # http://geojson.io/#map=2/20.0/0.0
 # https://tools.ietf.org/html/rfc7946#section-1.4
@@ -34,7 +36,10 @@ def processData(geoJson):
         role = getattr(feature.properties, 'role', '')
         name = getattr(feature.properties, 'name', '')
         description = getattr(feature.properties, 'description', '')
-        info = getattr(feature.properties, 'info', '')
+        if description == '':
+            description = getattr(feature.properties, 'desc', '')
+            if description == '':
+                description = getattr(feature.properties, 'info', '')
 
         if feature.geometry.type == 'Polygon':
             for coordinates in feature.geometry.coordinates:
@@ -42,7 +47,10 @@ def processData(geoJson):
                 for lng, lat in coordinates:
                     poly.append(float(lat))
                     poly.append(float(lng))
-                R.append('{}:node(poly:"{}");'.format(role, ' '.join(['{0:.5f}'.format(x) for x in poly])))
+
+                w = textwrap.fill(' '.join(['{0:.5f}'.format(x) for x in poly]), width=120, break_long_words=False,
+                                  break_on_hyphens=False)
+                R.append('{}:node(poly:"{}");'.format(role, w))
 
         if feature.geometry.type == 'LineString':
             lst = []
@@ -75,6 +83,6 @@ if __name__ == '__main__':
 
     if len(sys.argv) > 1:
         f = sys.argv[1]
-        J1 = json.load(open(f, 'r', encoding='utf-8'), encoding='utf-8', object_hook=lambda d: Namespace(**d))
+        J1 = json.load(open(f, 'r', encoding='utf-8'), object_hook=lambda d: Namespace(**d))
         for entry in processData(J1):
             print(entry)
