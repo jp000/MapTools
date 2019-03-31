@@ -1,0 +1,4 @@
+data=[out:xml][timeout:900][maxsize:1073741824];
+rel[name="Australian Alps Walking Track"][type=route][route=hiking];
+(>>; way(r);node(w);node(around:15000);<;); 
+out body;

@@ -42,7 +42,7 @@
 }
 
 #type=route & (route=hiking|route=foot) & (ref=* | name=*)
-type=route & (route=hiking|route=foot) & (ref=*)
+type=route & (route=hiking|route=foot)
 {
   add ref='${name}'; # if ref is missing, use name
   apply {
@@ -55,7 +55,7 @@ type=route & (route=hiking|route=foot) & (ref=*)
 }
 
 type=route & (route=bicycle|route=mtb) & (ref=* | name=*)
-#type=route & (route=bicycle|route=mtb) & (ref=*)
+#type=route & (route=bicycle|route=mtb)
 {
   add ref='${name}'; # if ref is missing, use name
   apply {

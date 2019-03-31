@@ -59,7 +59,6 @@ def GenJson(data, full):
     return out
 
 if __name__ == '__main__':
-    import wx
     '''
         data=[out:json][timeout:900][maxsize:1073741824];  
         rel[["name"~"GR 5 ",i][type=route][route=hiking](35.88905,-9.58008,54.21386,20.03906);
@@ -72,10 +71,4 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         Process(sys.argv[1], True)
     else:
-        app = wx.App(0)
-        with wx.FileDialog(None, "Select a file", wildcard='OSM|*.osm|All (*.*)|*.*') as dlg:
-            dlg.FilterIndex = 0
-            dlg.ShowModal()
-            if dlg.GetPath() == '':
-                sys.exit(1)
-            Process(dlg.GetPath(), True)
+        Process(r'c:\Usr\Maps\Tmp\GR5.osm', True)
