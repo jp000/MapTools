@@ -1,0 +1,15 @@
+data=[out:xml]; 
+(                      
+area[type=boundary][boundary=administrative][admin_level=8][name="Saint-Tropez"];
+area[type=boundary][boundary=administrative][admin_level=8][name="Ramatuelle"];
+area[type=boundary][boundary=administrative][admin_level=8][name="Gassin"];
+area[type=boundary][boundary=administrative][admin_level=8][name="La Croix-Valmer"];
+area[type=boundary][boundary=administrative][admin_level=8][name="Grimaud"];
+area[type=boundary][boundary=administrative][admin_level=8][name="Cogolin"];
+area[type=boundary][boundary=administrative][admin_level=8][name="Sainte-Maxime"];
+)->.x;  
+(                      
+node(area.x);  
+);                     
+( ._;<;<<;); 
+out body;   

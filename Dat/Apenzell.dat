@@ -1,0 +1,11 @@
+data=[out:xml];
+(
+area["name:fr"~"Appenzell"][type=boundary][boundary=administrative][admin_level=4](45.69083,5.60303,47.88688,10.37109);
+area["name:fr"="Saint-Gall"][type=boundary][boundary=administrative][admin_level=4](45.69083,5.60303,47.88688,10.37109);
+area["name:fr"="Liechtenstein"][type=boundary][boundary=administrative][admin_level=2](45.69083,5.60303,47.88688,10.37109);
+)->.x;
+(
+node(area.x);
+);
+( ._;<;<<;);
+out body;

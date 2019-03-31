@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76baaef3-d929-4c6a-b7c1-914db155bb74" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/maptools.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/maptools.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dat/Jacobi.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Json2Overpass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Json2Overpass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OsmJson2GeoJson.py" beforeDir="false" afterPath="$PROJECT_DIR$/OsmJson2GeoJson.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,17 +20,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Json2Overpass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="647">
-              <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="33" />
+            <state relative-caret-position="272">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OverpassApi.py">
+        <entry file="file://$PROJECT_DIR$/OsmJson2GeoJson.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="25" column="35" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="35" />
+            <state relative-caret-position="1292">
+              <caret line="81" selection-start-line="74" selection-end-line="81" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,9 +47,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Osm2Gpx.py" />
         <option value="$PROJECT_DIR$/bbbikeExtract.py" />
         <option value="$PROJECT_DIR$/OverpassApi.py" />
+        <option value="$PROJECT_DIR$/OsmJson2GeoJson.py" />
+        <option value="$PROJECT_DIR$/Osm2Gpx.py" />
         <option value="$PROJECT_DIR$/Json2Overpass.py" />
       </list>
     </option>
@@ -89,6 +98,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -117,7 +127,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Json2Overpass.py" />
-      <option name="PARAMETERS" value="&quot;c:\Users\e814688\Downloads\map (8).geojson&quot;" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -261,8 +271,8 @@
       <window_info id="Favorites" order="2" sideWeight="0.43144774" side_tool="true" weight="0.11985216" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989354" weight="0.32286555" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.30362388" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49964514" weight="0.2575906" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.30299667" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49964514" weight="0.25749168" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32981783" />
@@ -325,6 +335,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Json2Overpass.py</url>
+          <line>70</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -349,34 +366,44 @@
     <entry file="file://C:/Python36/Lib/site-packages/axdebug/__init__.py" />
     <entry file="file://C:/Python36/Lib/site-packages/axcontrol/__init__.py" />
     <entry file="file://C:/Python36/Lib/site-packages/pylab.py" />
-    <entry file="file://$PROJECT_DIR$/bbbikeExtract.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Osm2Gpx.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+        <state relative-caret-position="376">
+          <caret line="253" column="14" lean-forward="true" selection-start-line="253" selection-start-column="14" selection-end-line="253" selection-end-column="14" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Json2Overpass.py">
+    <entry file="file://$PROJECT_DIR$/bbbikeExtract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="33" />
+        <state relative-caret-position="-647">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OverpassApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="34">
           <caret line="25" column="35" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Json2Overpass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OsmJson2GeoJson.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="81" selection-start-line="74" selection-end-line="81" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

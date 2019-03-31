@@ -1,0 +1,9 @@
+data=[out:xml];  
+(                      
+area[name="La Réunion"][type=boundary][boundary=administrative][admin_level=3]; 
+)->.x;                
+(                      
+node(area.x);  
+);                     
+( ._;<;<<;); 
+out body;   

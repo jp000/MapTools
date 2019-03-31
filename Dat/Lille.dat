@@ -1,0 +1,9 @@
+data=[out:xml];  
+(                      
+area[name="Lille"][type=boundary][boundary=administrative][admin_level=7]; 
+)->.x;                
+(                      
+node(area.x);  
+);                     
+( ._;<;<<;); 
+out body;   

@@ -1,0 +1,9 @@
+data=[out:xml];  
+(                      
+area[name="Mascareignes"][place=archipelago]; 
+)->.x;                
+(                      
+node(area.x);  
+);                     
+( ._;<;<<;); 
+out body;   

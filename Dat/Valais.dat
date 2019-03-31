@@ -1,0 +1,9 @@
+data=[out:xml];
+(
+area["name:fr"="Valais"][type=boundary][boundary=administrative][admin_level=4](45.69083,5.60303,47.88688,10.37109);
+)->.x;
+(
+node(area.x);
+);
+( ._;<;<<;);
+out body;
