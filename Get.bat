@@ -5,11 +5,11 @@
 @if not %3. == . set style=--style=%3
 @if %2. == -f. goto wget
 @if %2. == -F. goto wget
-@if Exist %osmname% goto skipGet
+@if Exist "%osmname%" goto skipGet
 
 :wget
 @If Not Exist "%sname%.dat" goto error1
-@c:\usr\bin\wget -O "%osmname%" --post-file=%sname%.dat http://overpass-api.de/api/interpreter
+@c:\usr\bin\wget -O "%osmname%" --post-file="%sname%.dat" http://overpass-api.de/api/interpreter
 @IF %ERRORLEVEL% NEQ 0 GOTO error2
 
 :skipGet
