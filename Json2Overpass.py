@@ -10,7 +10,7 @@ import textwrap
 def swapList(lst):
     R = []
     for n in range(0, len(lst), 2):
-        R.append(lst[n+1])
+        R.append(lst[n + 1])
         R.append(lst[n])
     return R
 
@@ -44,7 +44,8 @@ def processData(geoJson):
         if feature.geometry.type == 'Polygon':
             try:
                 R.append('{}:&bbox={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in feature.geometry.bbox])))
-                R.append('{}:({})'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(feature.geometry.bbox)])))
+                R.append(
+                    '{}:({})'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(feature.geometry.bbox)])))
             except AttributeError:
                 pass
             for coordinates in feature.geometry.coordinates:
@@ -60,26 +61,32 @@ def processData(geoJson):
         if feature.geometry.type == 'LineString':
             try:
                 R.append('{}:&bbox={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in feature.geometry.bbox])))
-                R.append('{}:({})'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(feature.geometry.bbox)])))
+                R.append(
+                    '{}:({})'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(feature.geometry.bbox)])))
             except AttributeError:
                 pass
             lst = []
             for coordinates in feature.geometry.coordinates:
                 lst.extend(coordinates)
-            R.append('{}:[lng, lat]={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in lst])))
-            R.append('{}:[lat, lng]={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(lst)])))
+            if len(coordinates) == 2:
+                R.append('{}:[lng, lat]={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in lst])))
+                R.append('{}:[lat, lng]={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(lst)])))
+            if len(coordinates) == 3:
+                R.append('{}:[lng, lat, ele]={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in lst])))
 
-        if feature.geometry.type== 'Point':
+        if feature.geometry.type == 'Point':
             lst = []
             for coordinates in feature.geometry.coordinates:
                 lst.append(coordinates)
-            R.append('{}:[lat, lng]={} "{}"'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(lst)]), description))
+            R.append('{}:[lat, lng]={} "{}"'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(lst)]),
+                                                    description))
 
     return R
 
 
 if __name__ == '__main__':
     import sys
+    import wx
     import pprint
 
     try:
@@ -90,6 +97,16 @@ if __name__ == '__main__':
 
     if len(sys.argv) > 1:
         f = sys.argv[1]
+    else:
+        app = wx.App(0)
+        with wx.FileDialog(None, "Select a file", wildcard='GEOJSON|*.geojson|All (*.*)|*.*',
+                           style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST) as dlg:
+            dlg.FilterIndex = 0
+            dlg.ShowModal()
+            if dlg.GetPath() == '':
+                sys.exit(1)
+            f = dlg.GetPath()
+
         J1 = json.load(open(f, 'r', encoding='utf-8'), object_hook=lambda d: Namespace(**d))
         for entry in processData(J1):
             print(entry)
