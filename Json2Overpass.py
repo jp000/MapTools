@@ -7,9 +7,9 @@ import textwrap
 # http://geojson.io/#map=2/20.0/0.0
 # https://tools.ietf.org/html/rfc7946#section-1.4
 
-def swapList(lst):
+def swapList(lst, elements=2):
     R = []
-    for n in range(0, len(lst), 2):
+    for n in range(0, len(lst), elements):
         R.append(lst[n + 1])
         R.append(lst[n])
     return R
@@ -73,6 +73,7 @@ def processData(geoJson):
                 R.append('{}:[lat, lng]={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(lst)])))
             if len(coordinates) == 3:
                 R.append('{}:[lng, lat, ele]={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in lst])))
+                R.append('{}:[lat, lng, ele]={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(lst, 3)])))
 
         if feature.geometry.type == 'Point':
             lst = []

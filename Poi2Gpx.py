@@ -54,4 +54,12 @@ def processPoi(filename):
         fp.write(template3)
 
 if __name__ == '__main__':
-    processPoi('map.geojson')
+    import sys, wx
+    app = wx.App(0)
+    with wx.FileDialog(None, "Select a file", wildcard='GEOJSON|*.geojson|All (*.*)|*.*',
+                       style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST) as dlg:
+        dlg.FilterIndex = 0
+        dlg.ShowModal()
+        if dlg.GetPath() == '':
+            sys.exit(1)
+        processPoi(dlg.GetPath())
