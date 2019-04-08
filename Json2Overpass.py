@@ -3,13 +3,12 @@ from __future__ import print_function
 import json
 import textwrap
 
-
 # http://geojson.io/#map=2/20.0/0.0
 # https://tools.ietf.org/html/rfc7946#section-1.4
 
-def swapList(lst):
+def swapList(lst, elements=2):
     R = []
-    for n in range(0, len(lst), 2):
+    for n in range(0, len(lst), elements):
         R.append(lst[n + 1])
         R.append(lst[n])
     return R
@@ -19,7 +18,7 @@ def processData(geoJson):
     R = []
 
     if hasattr(geoJson, 'bbox'):
-        print('main:&bbox={}'.format(','.join(['{0:.5f}'.format(x) for x in J1.bbox])))
+        R.append('main:&bbox={}'.format(','.join(['{0:.5f}'.format(x) for x in geoJson.bbox])))
 
     for feature in geoJson.features:
         R.append('Feature = {}'.format(feature.geometry.type))
@@ -73,6 +72,7 @@ def processData(geoJson):
                 R.append('{}:[lat, lng]={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(lst)])))
             if len(coordinates) == 3:
                 R.append('{}:[lng, lat, ele]={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in lst])))
+                R.append('{}:[lat, lng, ele]={}'.format(name, ','.join(['{0:.5f}'.format(x) for x in swapList(lst, 3)])))
 
         if feature.geometry.type == 'Point':
             lst = []
@@ -83,30 +83,27 @@ def processData(geoJson):
 
     return R
 
+def main():
+    import wx
+    from MapDialog import MapDialog
+    from types import SimpleNamespace as Namespace
+
+    def display(filename, onDisplay):
+        J1 = json.load(open(filename, 'r', encoding='utf-8'), object_hook=lambda d: Namespace(**d))
+        for entry in processData(J1):
+            onDisplay(entry + '\n')
+
+    class MyApp(wx.App):
+        def OnInit(self):
+            self.frame = MapDialog(None, wx.ID_ANY, "")
+            self.frame.processFile = display
+            self.SetTopWindow(self.frame)
+            self.frame.Show()
+            return True
+
+    app = MyApp(0)
+    app.MainLoop()
+
 
 if __name__ == '__main__':
-    import sys
-    import wx
-    import pprint
-
-    try:
-        from types import SimpleNamespace as Namespace
-    except ImportError:
-        # Python 2.x fallback
-        from argparse import Namespace
-
-    if len(sys.argv) > 1:
-        f = sys.argv[1]
-    else:
-        app = wx.App(0)
-        with wx.FileDialog(None, "Select a file", wildcard='GEOJSON|*.geojson|All (*.*)|*.*',
-                           style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST) as dlg:
-            dlg.FilterIndex = 0
-            dlg.ShowModal()
-            if dlg.GetPath() == '':
-                sys.exit(1)
-            f = dlg.GetPath()
-
-        J1 = json.load(open(f, 'r', encoding='utf-8'), object_hook=lambda d: Namespace(**d))
-        for entry in processData(J1):
-            print(entry)
+    main()
