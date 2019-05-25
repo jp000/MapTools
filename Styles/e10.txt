@@ -1,0 +1,214 @@
+; e10.typ
+; Longueur: 724 octets
+; Fichier TYP compilé     25.05.2019     10:12:34
+; Décompilé le 25.05.2019 à 10:13:16
+
+[_id]
+ProductCode=1
+FID=1000
+CodePage=1252
+ [End]
+
+;=========== COMMENTAIRES ======
+[_comments]
+[End]
+
+
+
+
+;=========== POLYGONES : PRIORITE DANS L'AFFICHAGE ======
+[_drawOrder]
+[End]
+
+
+
+
+
+;===================== POLYGONES ========================
+
+
+[_polygon]
+Type=0x04
+;GRMN_TYPE: Large Manmade Areas/MILITARY_BASE/Military base area/Non NT
+String1=0x04,Military area
+ExtendedLabels=Y
+FontStyle=NoLabel (invisible)
+CustomColor=No
+Xpm="32 32 2 1"
+"! c #FF0000"
+"  c none"
+"!     ! !     ! !     ! !     ! "
+" !   !   !   !   !   !   !   !  "
+"  ! !     ! !     ! !     ! !   "
+"                                "
+"  ! !     ! !     ! !     ! !   "
+" !   !   !   !   !   !   !   !  "
+"!     ! !     ! !     ! !     ! "
+"                                "
+"!     ! !     ! !     ! !     ! "
+" !   !   !   !   !   !   !   !  "
+"  ! !     ! !     ! !     ! !   "
+"                                "
+"  ! !     ! !     ! !     ! !   "
+" !   !   !   !   !   !   !   !  "
+"!     ! !     ! !     ! !     ! "
+"                                "
+"!     ! !     ! !     ! !     ! "
+" !   !   !   !   !   !   !   !  "
+"  ! !     ! !     ! !     ! !   "
+"                                "
+"  ! !     ! !     ! !     ! !   "
+" !   !   !   !   !   !   !   !  "
+"!     ! !     ! !     ! !     ! "
+"                                "
+"!     ! !     ! !     ! !     ! "
+" !   !   !   !   !   !   !   !  "
+"  ! !     ! !     ! !     ! !   "
+"                                "
+"  ! !     ! !     ! !     ! !   "
+" !   !   !   !   !   !   !   !  "
+"!     ! !     ! !     ! !     ! "
+"                                "
+;12345678901234567890123456789012
+[end]
+
+
+;====================== LINES ===========================
+
+
+[_line]
+Type=0x02
+;GRMN_TYPE: Roads/PRINCIPAL_HWY/Principal highway, usually divided and limited access, akin to US highways/Non NT, NT
+UseOrientation=Y
+LineWidth=2
+Xpm="0 0 1 0"
+"1 c #101010"
+String1=0x01,Autoroute
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x03
+;GRMN_TYPE: Roads/OTHER_HWY/Other highway road, akin to a state highway in the US/Non NT, NT
+UseOrientation=Y
+LineWidth=1
+Xpm="0 0 1 0"
+"1 c #101010"
+String1=0x01,Route principale
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x07
+;GRMN_TYPE: Roads/ALLEY, DRIVEWAY/Alleyway, private driveway to residence/Non NT, NT
+UseOrientation=Y
+LineWidth=1
+Xpm="0 0 1 0"
+"1 c #101010"
+String1=0x01,Route
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x14
+;GRMN_TYPE: Misc. Line Types/RAILROAD/Railroad/Non NT
+UseOrientation=Y
+Xpm="32 3 2  1"
+"! c #101010"
+"  c none"
+"   !   !   !   !   !   !   !   !"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"   !   !   !   !   !   !   !   !"
+;12345678901234567890123456789012
+String1=0x01,Rail
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x16
+;GRMN_TYPE: Roads/TRAIL/Walkway or trail/Non NT, NT
+UseOrientation=Y
+LineWidth=1
+Xpm="0 0 1 0"
+"1 c #101010"
+String1=0x01,Sentier
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x1f
+;GRMN_TYPE: Water Features/RIVER/Large stream or river/Non NT
+UseOrientation=Y
+Xpm="32 1 2  1"
+"! c #101010"
+"# c #FFFFFF"
+"!!!!#####!!!!#####!!!!!#####!!!!"
+;12345678901234567890123456789012
+String1=0x01,Riviere
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x38
+;GRMN_TYPE: //
+UseOrientation=Y
+Xpm="32 1 2  1"
+"! c #101010"
+"# c #FFFFFF"
+"!###!###!###!###!###!###!###!###"
+;12345678901234567890123456789012
+String1=0x01,Teleski
+ExtendedLabels=N
+[end]
+
+
+;====================== POINTS ==========================
+
+
+[_point]
+Type=0x02a
+SubType=0x00
+;GRMN_TYPE: Business - Food and Drink/RESTAURANT/General restaurant of unknown genre/Non NT
+String1=0x01,
+ExtendedLabels=N
+DayXpm="13 15 17 1"   Colormode=16
+"!	c #A85C00"
+"#	c #F8FCF8"
+"%	c #000000"
+"?	c #D07800"
+"$	c #D87C00"
+"*	c #B86400"
+"=	c #E08000"
+"1	c #F89400"
+"2	c #B86800"
+"3	c #E08400"
+"4	c #C87400"
+"5	c #C07000"
+"6	c #B06400"
+"7	c #985400"
+"8	c #A05800"
+"9	c #804400"
+"  	c none"
+"  ### ###    "
+" #%%%#%%%#   "
+"#%###%%##%#  "
+"#%#######%## "
+" #%%%%%%%%%%#"
+" #%######%%%#"
+" #%######%#%#"
+" #%?#$#*#%#%#"
+" #%=#1?2#%#%#"
+" #%$13#2#%#%#"
+" #%4??567%%%#"
+" #%*22#89%%# "
+" #%%!879%%#  "
+" #%%%%%%%%#  "
+"  ########   "
+;1234567890123
+[end]

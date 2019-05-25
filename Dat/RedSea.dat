@@ -1,0 +1,9 @@
+data=[out:xml];  
+(                      
+area["name:fr"="Gouvernorat de la Mer-Rouge"][boundary=administrative][admin_level=4]; 
+)->.x;                
+(                      
+node(area.x);  
+);                     
+( ._;<;<<;); 
+out body;   

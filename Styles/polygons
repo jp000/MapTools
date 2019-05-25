@@ -1,0 +1,9 @@
+landuse=reservoir|landuse=basin [0x3c resolution 18]
+natural=water {name '${name}'} [0x3c resolution 18]
+#waterway=riverbank {name '${name}' } [0x3c resolution 18]
+natural=sea [0x32 resolution 10]
+#natural=glacier {name '${name}' } [0x4d resolution 16]
+
+landuse=military { name '$(name)' } [ 0x000004 resolution 18 default_name '[military]' ]
+military=* { name '$(name)' } [ 0x000004 resolution 18 default_name '[military]' ]
+aeroway=* { name '$(name)' } [ 0x000004 resolution 18 default_name '[aeroway]' ] 

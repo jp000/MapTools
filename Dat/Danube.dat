@@ -1,0 +1,4 @@
+data=[out:xml][timeout:900][maxsize:1073741824];
+rel[ref="EV6"][type~".*route"][route~"bicycle"];
+(>>; way(r);node(w);node(around:300);<;); 
+out body;

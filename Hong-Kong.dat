@@ -1,9 +1,0 @@
-data=[out:xml];  
-(                      
-area["name:en"="Hong Kong"][admin_level=3]; 
-)->.x;                
-(                      
-node(area.x);  
-);                     
-( ._;<;<<;); 
-out body;   

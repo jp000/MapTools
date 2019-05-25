@@ -28,7 +28,7 @@ amenity=drinking_water|drinking_water=yes|drinkable=yes [0x5000 resolution 22 de
 
 amenity=shower {name '${name}' | '${amenity}'} [0x4F00 resolution 22]
 
-shop~'seafood|supermarket|convenience|greengrocer|bakery|bakers|beverages' {name '${name}' | '${shop}'} [0x2e02 resolution 24 default_name 'Shop']
+shop~'mall|supermarket|convenience|general|greengrocer|bakery|bakers|seafood|beverages' {name '${name}' | '${shop}'} [0x2e02 resolution 24 default_name 'Shop']
 
 #amenity=bench [0x4a01 resolution 22 default_name 'B']
 

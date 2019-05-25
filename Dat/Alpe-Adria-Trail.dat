@@ -1,0 +1,4 @@
+data=[out:xml][timeout:900][maxsize:1073741824];
+rel[ref="AAT"][type~".*route"][route~"hiking|foot"];
+(>>;>;node(around:600);<;); 
+out body;

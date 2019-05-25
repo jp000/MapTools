@@ -1,0 +1,132 @@
+# Etrex 10 mapping rules
+
+include "name"; 
+
+route_bus=* {set route_bus='[${route_bus}]' }
+route_bik=* {set route_bik='(${route_bik})' }
+route_hik=* {set route_hik='${route_hik}' }
+
+#this can be adapted/removed to show the relations at lower resolution
+#route_hik ~ '.*(?i)(gr|e).*' {name '${route_hik}'} [0x07 road_class=0  resolution 16]
+#route_hik ~ '(2|4)' {name '${route_hik}'} [0x07 road_class=0  resolution 16]
+route_hik=* {name '${route_hik}'} [0x07 road_class=0  resolution 16]
+
+route_bus=* {
+ name 
+    '${route_hik},${route_bik},${route_bus},${name}'
+    | '${route_hik},${route_bik},${route_bus}'
+    | '${route_bik},${route_bus},${name}'
+    | '${route_bik},${route_bus}'
+    | '${route_hik},${route_bus},${name}'
+    | '${route_hik},${route_bus}'
+    | '${route_bus},${name}'
+    | '${route_bus}'
+} [0x03 road_class=0  resolution 20]
+
+route_bus!=* & (route_hik=* | route_bik=*) {
+ name 
+    '${route_hik},${route_bik},${name}'
+    | '${route_hik},${route_bik}'
+    | '${route_hik},${name}'
+    | '${route_hik}'
+    | '${route_bik},${name}'
+    | '${route_bik}'
+} [0x07 road_class=0  resolution 20]
+
+include "abbreviations";
+
+# Hide proposed ways
+(highway=proposed | highway=proposal | highway=planned | highway ~ '.*proposed.*') {delete highway;delete junction}
+
+# Hide removed ways
+(highway=razed | highway=dismantled) {deletealltags}
+
+# Hide abandoned ways. Abandoned highways have some evidence of their former existence but are no longer used. These
+# abandoned highways could be useful in topographical maps.
+((abandoned:highway=* & highway!=*) | highway=abandoned) {deletealltags}
+
+# Hide other non-existent ways
+(highway=unbuilt | highway=neverbuilt | highway=rejected | highway ~ 'x-.*') {echotags 'Del'; delete highway;delete junction}
+
+# Remove highway tag from ways which are not suitable for routing
+highway=traffic_signals | highway=junction | highway=island | highway=centre_line | highway=traffic_island | highway=stopline {echotags 'Del'; delete highway} 
+highway=piste | highway=ski {echotags 'ski';delete highway}
+#highway=no | highway=none {delete highway}
+ 
+# Hide unaccessible tunnels
+highway=* & tunnel=yes & (access=private|access=no) & foot!=* & bicycle!=* {delete highway;delete junction}
+
+# Disable dead-end-checks for unaccessible oneways
+highway=* & oneway=yes & (access=private|access=no) {add mkgmap:dead-end-check=false}
+
+# Convert generic path to most specific
+#highway=footway & snowplowing!=no & (bicycle=yes|bicycle=designated|bicycle=permissive|bicycle=official) {set highway=cycleway; set bicycle=yes; set foot=yes}
+#highway=path & snowplowing!=no & (bicycle=designated|bicycle=permissive|bicycle=official) {echotags 'snowplowing'; set highway=cycleway; set bicycle=yes}
+highway=footway & (bicycle~'yes|designated|permissive|official') {set highway=cycleway; set bicycle=yes; set foot=yes}
+highway=path & (bicycle~'designated|permissive|official') {set highway=cycleway; set bicycle=yes}
+highway=path & (horse~'designated|permissive|official') {set highway=bridleway; set horse=yes}
+
+leisure=track & area!=yes {add highway=footway; name '${name} (${sport})' | '${name}'}
+(man_made=pier | man_made=piste:halfpipe) & area!=yes {add highway=footway; name '${ref} ${name}' | '${ref}' | '${name}' }
+
+# Set highway names to include the reference if there is one
+#highway=motorway {name '${ref} ${name}' | '${ref}' | '${name}' }
+#highway=trunk {name '${ref} ${name}' | '${ref}' | '${name}'; add mkgmap:display_name = '${name} (${ref})' }
+#highway=primary {name '${ref|highway-symbol:box} ${name}' | '${ref|highway-symbol:box}' | '${name}'; add mkgmap:display_name = '${name} (${ref})' }
+#highway=secondary | highway=tertiary {name '${ref|highway-symbol:box} ${name}' | '${ref|highway-symbol:oval}' | '${name}'; add mkgmap:display_name = '${name} (${ref})' }
+#highway=* {name '${name}' | '${ref}' }
+
+trail_visibility=bad|trail_visibility=horrible|trail_visibility=no [0x16 resolution 22 road_class=0 default_name 'Bad' continue with_actions]
+
+highway=* {name '${name}' }
+
+
+# Roundabouts
+junction=roundabout & highway=trunk [0x07 road_class=0  resolution 16]
+junction=roundabout & highway=primary [0x07 road_class=0  resolution 16]
+junction=roundabout & highway=secondary [0x07 road_class=0  resolution 18]
+junction=roundabout & highway=tertiary [0x07 road_class=0  resolution 18]
+junction=roundabout & highway=unclassified [0x07 road_class=0  resolution 18]
+junction=roundabout [0x07 road_class=0  resolution 22]
+
+
+# Ways sorted roughly by descending order of class
+highway=motorway [0x02 road_class=0  resolution 16]
+highway=motorway_link [0x02 road_class=0  resolution 16]
+highway=trunk [0x03 road_class=0  resolution 16]
+highway=trunk_link [0x03 road_class=0  resolution 16]
+#highway=* & highway!=proposed & motorroad=yes [0x07 road_class=0  resolution 16]
+highway=primary [0x03 road_class=0  resolution 18]
+highway=primary_link [0x03 road_class=0  resolution 18]
+highway=secondary [0x03 road_class=0  resolution 22]
+highway=secondary_link [0x03 road_class=0  resolution 22]
+highway=tertiary [0x03 road_class=0  resolution 22]
+highway=tertiary_link [0x03 road_class=0  resolution 22]
+highway=minor [0x03 road_class=0  resolution 22]
+
+# Some countries allow, others disallow bicycling on pedestrian streets.
+# To allow bicycling, add 'add bicycle=yes'
+highway=pedestrian & area!=yes {add access = no; add foot = yes} [0x07 road_class=0 resolution 22]
+highway=living_street [0x07 road_class=0  resolution 22]
+highway=residential [0x07 road_class=0  resolution 22]
+highway=service [0x07 road_class=0  resolution 22]
+highway=unclassified [0x07 road_class=0  resolution 22]
+
+tracktype=grade1|tracktype=grade2 [0x07  road_class=0 resolution 22]
+tracktype=* [0x16 road_class=0 resolution 22]
+
+highway=steps [0x16 resolution 22 road_class=0 default_name "S" continue with_actions]
+highway~'bridleway|byway|pedestrian|cycleway|footway|steps|escalator' {set highway=path}
+highway=path [0x16 road_class=0 resolution 22]
+highway=track [0x16 road_class=0 resolution 22]
+
+natural=coastline [0x15 resolution 16]
+
+railway~'light_rail|narrow_gauge|funicular' {set railway=rail}
+railway=rail [0x14 resolution 18]
+
+waterway~'river|canal|drain' & tunnel!=yes [0x1f resolution 18]
+waterway=stream & tunnel!=yes [0x18 resolution 22]
+
+aerialway~'cable_car|gondola|chair_lift|mixed_lift' [0x38 default_name "Ski" resolution 22]
+#route_ref=* {name '${route_ref}' } [0x07 road_class=0  resolution 18]

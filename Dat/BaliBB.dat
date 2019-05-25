@@ -1,0 +1,13 @@
+data=[out:xml][bbox];  
+(                      
+area[name="Bali"][boundary=administrative][admin_level=4]; 
+area[name="Gili Islands"][place="archipelago"];
+)->.x;  
+(              
+node(area.x);  
+way(area.x);  
+rel(area.x);  
+);                     
+( ._;<;<<;); 
+out body;   
+&bbox=114.41162,-8.87964,116.12823,-8.02388
