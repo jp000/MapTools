@@ -1,4 +1,14 @@
-data=[out:xml][timeout:900][maxsize:1073741824];
-rel["name"~"GR 5", i][type=route][route=hiking](43.67085166460574,6.41326904296875,46.39998810407942,7.502288818359374);
-(>>; way(r);node(w);node(around:2000);<;); 
+data=[out:xml];
+rel(43.671813942263725,6.343059539794921,46.419872498633765,7.559967041015624)[ref="GR 5"][type=route][route~"hiking|foot"] -> .a;
+rel(43.671813942263725,6.343059539794921,46.419872498633765,7.559967041015624)[ref="GR 5b"][type=route][route~"hiking|foot"] -> .b;
+rel(43.671813942263725,6.343059539794921,46.419872498633765,7.559967041015624)[ref="GR 5c"][type=route][route~"hiking|foot"] -> .c;
+rel(43.671813942263725,6.343059539794921,46.419872498633765,7.559967041015624)[ref="GR 52"][type=route][route~"hiking|foot"] -> .d;
+rel(43.671813942263725,6.343059539794921,46.419872498633765,7.559967041015624)[ref="GR 52A"][type=route][route~"hiking|foot"] -> .e;
+(
+(.a >>; way(r);node(w);node(around:2000);<;);
+(.b >>; way(r);node(w);node(around:2000);<;);
+(.c >>; way(r);node(w);node(around:2000);<;);
+(.d >>; way(r);node(w);node(around:2000);<;);
+(.e >>; way(r);node(w);node(around:2000);<;);
+);
 out body;

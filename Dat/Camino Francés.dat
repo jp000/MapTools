@@ -1,4 +1,4 @@
-data=[out:xml][timeout:900][maxsize:1073741824];
+data=[out:xml];
 rel[name="Camino Francés"][type=route][route~"hiking|foot"];
 (>>; way(r);node(w);node(around:5000);<;); 
 out body;
