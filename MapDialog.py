@@ -2,14 +2,13 @@
 # -*- coding: UTF-8 -*-
 import wx
 
-import MyFrame
+import MyDialog
 import MyEmoji, Tools
 
-class MapDialog(MyFrame.MyFrame):
+class MapDialog(MyDialog.MyFrame):
     def __init__(self, *args, **kwds):
         self.mainIcon = MyEmoji.img.GetBitmap()
         self.toolsOpen = Tools.catalog['Open'].GetBitmap()
-        self.toolsSave = Tools.catalog['Save'].GetBitmap()
         super(MapDialog, self).__init__(*args, **kwds)
 #        _icon = MyEmoji.img.GetIcon()
 #        self.SetIcon(_icon)
@@ -27,10 +26,6 @@ class MapDialog(MyFrame.MyFrame):
                         self.processFile(fileName, self.txtTop.AppendText)
                 except:
                     self.txtBottom.AppendText('"processFile" not found or not callable\n')
-
-    def onToolSave(self, event):
-        print("Event handler 'onToolSave' not implemented!")
-        event.Skip()
 
     def OnClose(self, event):
         self.Close()
