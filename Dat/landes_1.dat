@@ -1,0 +1,37 @@
+data=[out:xml][bbox];
+(                      
+area[name="Vieux-Boucau-les-Bains"][boundary=administrative][admin_level=8];
+area[name="Soustons"][boundary=administrative][admin_level=8];
+area[name="Seignosse"][boundary=administrative][admin_level=8];
+area[name="Soorts-Hossegor"][boundary=administrative][admin_level=8];
+area[name="Capbreton"][boundary=administrative][admin_level=8];
+area[name="Labenne"][boundary=administrative][admin_level=8];
+
+area[name="Orx"][boundary=administrative][admin_level=8];
+area[name="Bénesse-Maremne"][boundary=administrative][admin_level=8];
+area[name="Angresse"][boundary=administrative][admin_level=8];
+area[name="Saint-Vincent-de-Tyrosse"][boundary=administrative][admin_level=8];
+area[name="Tosse"][boundary=administrative][admin_level=8];
+area[name="Saubion"][boundary=administrative][admin_level=8];
+area[name="	Saint-Martin-de-Seignanx"][boundary=administrative][admin_level=8];
+area[name="Ondres"][boundary=administrative][admin_level=8];
+area[name="Tarnos"][boundary=administrative][admin_level=8];
+area[name="Boucau"][boundary=administrative][admin_level=8];
+area[name="Anglet"][boundary=administrative][admin_level=8];
+area[name="Bayonne"][boundary=administrative][admin_level=8];
+area[name="Biarritz"][boundary=administrative][admin_level=8];
+area[name="Bidart"][boundary=administrative][admin_level=8];
+area[name="Guéthary"][boundary=administrative][admin_level=8];
+area[name="Saint-Jean-de-Luz"][boundary=administrative][admin_level=8];
+area[name="Ciboure"][boundary=administrative][admin_level=8];
+area[name="Urrugne"][boundary=administrative][admin_level=8];
+area[name="Hendaye"][boundary=administrative][admin_level=8];
+area[name="Irun"][boundary=administrative][admin_level=8];
+area[name="Hondarribia/Fontarrabie"][boundary=administrative][admin_level=8];
+)->.x;                
+(                      
+node(area.x);  
+);                     
+( ._;<;<<;); 
+out body;   
+&bbox= -2.0, 43.25, -1.082, 43.90

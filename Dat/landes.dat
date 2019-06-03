@@ -1,0 +1,10 @@
+data=[out:xml];
+(                      
+area[name="Dax"][boundary=administrative][admin_level=7];
+area[name="Bayonne"][boundary=administrative][admin_level=7];
+)->.x;                
+(                      
+node(area.x);  
+);                     
+( ._;<;<<;); 
+out body;   

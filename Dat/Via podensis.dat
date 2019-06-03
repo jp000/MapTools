@@ -1,0 +1,4 @@
+data=[out:xml];
+rel[name="Via Podiensis"][type=route][route~"hiking|foot"];
+(>>; way(r);node(w);node(around:5000);<;); 
+out body;
