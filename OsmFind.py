@@ -25,13 +25,19 @@ class stack:
         return len(self._stk)
 
 
-def process(parameters, filename, serachPattern):
-    pat = re.compile(serachPattern)
+def process(parameters, filename, searchPattern):
+    if parameters.quoteChar:
+        searchPattern = searchPattern.replace(parameters.quoteChar, '"')
+
+    if parameters.ignoreCase:
+        pat = re.compile(searchPattern, re.IGNORECASE)
+    else:
+        pat = re.compile(searchPattern)
     S = stack(parameters.contextBefore)
     post = 0
     matchCount = 0
     lineNumber = 0
-
+    
     with open(filename, 'rb') as fp:
         while True:
             line = fp.readline()
@@ -39,7 +45,10 @@ def process(parameters, filename, serachPattern):
                 break
             lineNumber += 1
             line = line.decode('utf8').strip('\n')
-            m = pat.match(line)
+            if parameters.search:
+                m = pat.search(line)
+            else:
+                m = pat.match(line)
             if not m:
                 if post > 0:
                     if parameters.showNumber:
@@ -77,9 +86,13 @@ if __name__ == '__main__':
     parser.add_argument('-B', '--contextBefore', action='store', type=int, default=0, help='Display n previous lines')
     parser.add_argument('-A', '--contextAfter', action='store', type=int, default=0, help='Display n post lines')
     parser.add_argument('-m', '--maxMaches', action='store', type=int, default=0, help='Stop after n matches')
-    parser.add_argument('-p', '--serachPattern', action='store', required=True, help='Pattern to match')
+    parser.add_argument('-p', '--searchPattern', action='store', required=True, help='Pattern to match')
     parser.add_argument('-N', '--showNumber', action='store_true', help='Show line numbers')
+    parser.add_argument('-i', '--ignoreCase', action='store_true', help='Make search case insensitive')
+    parser.add_argument('-s', '--search', action='store_true', help='Use search instead of match in pattern')
+    parser.add_argument('-q', '--quoteChar', action='store', help='Replace chat with double quote')
+
 
     opt = parser.parse_args()
 
-    process(opt, opt.filename, opt.serachPattern)
+    process(opt, opt.filename, opt.searchPattern)

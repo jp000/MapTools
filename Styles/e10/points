@@ -29,18 +29,29 @@ place=islet  & name=* [0x650c resolution 20]
 
 include "abbreviations";
 
+opening_hours=* | phone=* {
+ set addr:postcode = '${opening_hours} (${phone})' |
+    '${opening_hours}' |
+    '${phone}';
+ set mkgmap:label:2 = '${opening_hours} (${phone})' |
+    '${opening_hours}' |
+    '${phone}';
+}
+
 amenity=bbq|tourism=picnic_site [0x4a00 resolution 22 default_name 'Bbq']
 leisure=firepit & access=official [0x4a00 resolution 22 default_name 'Bbq']
 leisure=firepit [0x4a00 resolution 22 default_name 'Bbq']
 
 tourism=viewpoint [0x5200 resolution 22]
-tourism=information | information=guidepost {name '${name} [${ele}]' | '${name}' } [0x4c00 resolution 20]
+tourism=information | information=guidepost {
+    name '${name} [${ele}]' | '${name}' | '[${ele}]'
+    } [0x4c00 resolution 20]
 
 
-tourism~'hotel|motel' [0x2b01 resolution 24]
-tourism~'alpine_hut|bed_and_breakfast|guest_house|hostel' [0x2b02 resolution 24]
-tourism~'wilderness_hut' { name '${name} [${ele}]' | '${name}' } [0x2b00 resolution 24 default_name 'Hut']
-tourism~'camping|camp_site|caravan_site' [0x2b03 resolution 20 ]
+tourism~'hotel|motel'  [0x2b01 resolution 24]
+tourism~'alpine_hut|bed_and_breakfast|guest_house|hostel'  [0x2b02 resolution 24]
+tourism~'wilderness_hut' { name '${name} [${ele}]' | '${name}' | '[${ele}]' } [0x2b00 resolution 24 default_name 'Hut']
+tourism~'camping|camp_site|caravan_site' [0x2b03 resolution 22 ]
 
 amenity=shelter & shelter_type~'weather_shelter|basic_hut|lean_to|picnic_shelter|rock_shelter|sun_shelter' [0x4a00 resolution 18 default_name 'R']
 
@@ -53,10 +64,10 @@ amenity=drinking_water|drinking_water=yes|drinkable=yes [0x5000 resolution 20 de
 
 amenity=shower  [0x4F00 resolution 22]
 
-shop=mall  [0x2e04 resolution 24 default_name 'Mall']
-shop=supermarket [0x2e02 resolution 24 default_name 'Super']
-shop~'convenience|general|greengrocer|bakery|bakers|seafood|beverages' [0x2e00 resolution 24 default_name 'Shop']
-shop=chemist|amenity=pharmacy  [0x2e05 resolution 24 default_name 'Ph']
+shop=mall  [0x2e04 resolution 24]
+shop=supermarket [0x2e02 resolution 24]
+shop~'convenience|general|greengrocer|bakery|bakers|seafood|beverages|butcher'  [0x2e00 resolution 24]
+shop=chemist|amenity=pharmacy  [0x2e05 resolution 24]
 
 natural=peak  [0x6616 resolution 20]
 natural=volcano  [0x6616 resolution 20]
@@ -71,9 +82,8 @@ natural=water & name=* [0x6603 resolution 24]
 natural=waterfall | waterway=waterfall [0x6508 resolution 24]
 natural=wetland & name=* [0x6513 resolution 24]
 
-public_transport=platform | highway=bus_stop  {name '${ref}'} [0x2F08 resolution 24]
+(highway=bus_stop | railway=tram_stop | railway=halt | railway=station) {name '${name}'} [0x2F08 resolution 24]
 
-#barrier~'gate|lift_gate|swing_gate|bump_gate|bollard|block|chain' [0x0e00 resolution 24 default_name 'G']
 barrier=toll_booth [0x0e00 resolution 22 default_name 'G']
 
 healthcare=hospital | amenity=hospital | amenity=clinic [0x3002 resolution 22]

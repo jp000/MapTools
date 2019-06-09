@@ -1,14 +1,12 @@
 data=[out:xml];
-rel(43.671813942263725,6.343059539794921,46.419872498633765,7.559967041015624)[ref="GR 5"][type=route][route~"hiking|foot"] -> .a;
-rel(43.671813942263725,6.343059539794921,46.419872498633765,7.559967041015624)[ref="GR 5b"][type=route][route~"hiking|foot"] -> .b;
-rel(43.671813942263725,6.343059539794921,46.419872498633765,7.559967041015624)[ref="GR 5c"][type=route][route~"hiking|foot"] -> .c;
-rel(43.671813942263725,6.343059539794921,46.419872498633765,7.559967041015624)[ref="GR 52"][type=route][route~"hiking|foot"] -> .d;
-rel(43.671813942263725,6.343059539794921,46.419872498633765,7.559967041015624)[ref="GR 52A"][type=route][route~"hiking|foot"] -> .e;
+rel(43.671814,6.34306,46.419873,7.559967)[~"ref|name"~"GR 5[25BC]?$",i][type=route][route~"hiking|foot"] -> .a;
+area[name="Briançon"][type=boundary][boundary=administrative][admin_level=8] -> .a1;
+area[name="Menton"][type=boundary][boundary=administrative][admin_level=8] -> .a2;
+area[name="Nice"][type=boundary][boundary=administrative][admin_level=8] -> .a3;
 (
-(.a >>; way(r);node(w);node(around:2000);<;);
-(.b >>; way(r);node(w);node(around:2000);<;);
-(.c >>; way(r);node(w);node(around:2000);<;);
-(.d >>; way(r);node(w);node(around:2000);<;);
-(.e >>; way(r);node(w);node(around:2000);<;);
+    (.a >>; way(r);node(w);node(around:400);<;);
+    ( node(area.a1);<;<<;);
+    ( node(area.a2);<;<<;);
+    ( node(area.a3);<;<<;);
 );
 out body;

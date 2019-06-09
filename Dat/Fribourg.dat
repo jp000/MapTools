@@ -4,7 +4,6 @@ area[name="Fribourg/Freiburg"][boundary=administrative][admin_level=4];
 area[name="District de la Broye-Vully"][type=boundary][boundary=administrative][admin_level=6]; 
 area[name="District de la Riviera-Pays-d’Enhaut"][type=boundary][boundary=administrative][admin_level=6]; 
 area[name="District d\'Aigle"][type=boundary][boundary=administrative][admin_level=6];
-area[name="Verwaltungskreis Bern-Mittelland"][boundary=administrative][admin_level=6];
 )->.x;                
 (                      
 node(area.x);  

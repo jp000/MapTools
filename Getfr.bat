@@ -10,7 +10,7 @@
 @set server3="https://lz4.overpass-api.de/api/interpreter"
 @set server4="http://overpass.osm.ch/api/interpreter"
 @set server5="https://overpass.kumi.systems/api/interpreter"
-@set server=%server3%
+@set server=%server2%
 
 @if not %3. == . set style=--style=%3
 @if %2. == -f. goto wget

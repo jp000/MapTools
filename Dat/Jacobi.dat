@@ -1,4 +1,4 @@
 data=[out:xml][timeout:900][maxsize:1073741824];
 rel[name="Via Jacobi"][type=route][route=hiking](35.88905,-9.58008,54.21386,20.03906);
-(>>; way(r);node(w);node(around:1500);<;); 
+(>>; way(r);node(w);node(around:1000);<;); 
 out body;

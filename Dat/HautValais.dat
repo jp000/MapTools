@@ -1,0 +1,12 @@
+data=[out:xml];
+(
+area[name="Goms"][type=boundary][boundary=administrative][admin_level=6](45.69083,5.60303,47.88688,10.37109);
+area[name="Östlich Raron"][type=boundary][boundary=administrative][admin_level=6](45.69083,5.60303,47.88688,10.37109);
+area[name="Brig"][type=boundary][boundary=administrative][admin_level=6](45.69083,5.60303,47.88688,10.37109);
+area[name="Visp"][type=boundary][boundary=administrative][admin_level=6](45.69083,5.60303,47.88688,10.37109);
+)->.x;
+(
+node(area.x);
+);
+( ._;<;<<;);
+out body;

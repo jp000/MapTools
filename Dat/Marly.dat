@@ -1,0 +1,9 @@
+data=[out:xml];  
+(                      
+area[name="Marly"][type=boundary][boundary=administrative][admin_level=8]["swisstopo:SHN"=CH10042206];
+)->.x;                
+(                      
+node(area.x);  
+);                     
+( ._;<;<<;); 
+out body;   

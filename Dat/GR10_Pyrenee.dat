@@ -1,0 +1,8 @@
+data=[out:xml][timeout:900][maxsize:1073741824];
+rel[ref="GR 10"][type=route][route~"hiking|foot"](42.220381783720605,-1.878662109375,43.432977075795606,3.2464599609375) -> .a;
+rel[ref~"HRP"][type=route][route~"hiking|foot"](42.220381783720605,-1.878662109375,43.432977075795606,3.2464599609375) -> .b;
+(
+(.a >>; way(r);node(w);node(around:2000);<;);
+(.b >>; way(r);node(w);node(around:2000);<;);
+);
+out body;

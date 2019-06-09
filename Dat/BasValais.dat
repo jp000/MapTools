@@ -1,0 +1,15 @@
+data=[out:xml];
+(
+area[name="Monthey"][type=boundary][boundary=administrative][admin_level=6](45.69083,5.60303,47.88688,10.37109);
+area[name="Saint-Maurice"][type=boundary][boundary=administrative][admin_level=6](45.69083,5.60303,47.88688,10.37109);
+area[name="Entremont"][type=boundary][boundary=administrative][admin_level=6](45.69083,5.60303,47.88688,10.37109);
+area[name="Martigny"][type=boundary][boundary=administrative][admin_level=6](45.69083,5.60303,47.88688,10.37109);
+area[name="Conthey"][type=boundary][boundary=administrative][admin_level=6](45.69083,5.60303,47.88688,10.37109);
+area[name="Sion"][type=boundary][boundary=administrative][admin_level=6](45.69083,5.60303,47.88688,10.37109);
+area[name="Hérens"][type=boundary][boundary=administrative][admin_level=6](45.69083,5.60303,47.88688,10.37109);
+)->.x;
+(
+node(area.x);
+);
+( ._;<;<<;);
+out body;
