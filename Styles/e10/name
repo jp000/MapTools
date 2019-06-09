@@ -8,7 +8,8 @@ operator ~ '(?i)fix[ _]?+me'	{ delete operator; }
 brand ~ '(?i)fix[ _]?+me'		{ delete brand; }
 name ~ '(?i)fix[ _]?+me'		{ delete name; }
 
-name=* { set name='${name:fr}' | '${name:de}' | '${name:it}' | '${name:en}' | '${name}' }
+#name=* { set name='${name:fr}' | '${name:en}' | '${name:de}' | '${name:it}' | '${name}' }
+name=* { set name='${name}' }
 
 # delete duplicate names
 operator=${brand} { delete operator; }

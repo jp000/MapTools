@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76baaef3-d929-4c6a-b7c1-914db155bb74" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hong-Kong.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapDialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/MapDialog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poi2Gpx.py.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e10/points" beforeDir="false" afterPath="$PROJECT_DIR$/e10/points" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/e10/lines" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/e10/lines" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/e10/name" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/e10/name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/e10/points" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/e10/points" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/e10/relations" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/e10/relations" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +14,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>-A</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\Usr\Maps\MapTools</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="REBASE" />
@@ -62,8 +68,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
