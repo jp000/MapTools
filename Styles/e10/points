@@ -20,7 +20,7 @@ place=town & population >    999 & name=* [0x0a00 resolution 18]
 place=town & population >      0 & name=* [0x0b00 resolution 18]
 place=town                       & name=* [0x0800 resolution 18]
 
-place=village                    & name=* [0x0900 resolution 22]
+place=village                    & name=* [0x0900 resolution 19]
 place=suburb                     & name=* [0x0a00 resolution 22]
 place=hamlet                     & name=* [0x0b00 resolution 24]
 
@@ -43,12 +43,10 @@ leisure=firepit & access=official [0x4a00 resolution 22 default_name 'Bbq']
 leisure=firepit [0x4a00 resolution 22 default_name 'Bbq']
 
 tourism=viewpoint [0x5200 resolution 22]
-tourism=information | information=guidepost {
-    name '${name} [${ele}]' | '${name}' | '[${ele}]'
-    } [0x4c00 resolution 20]
+#information=guidepost & name=* { name '${name} ${ele}' | '${name}' } [0x4c00 resolution 22]
+tourism=information | information=guidepost {name '${name} ${ele}' | '${name}'} [0x4c00 resolution 22]
 
-
-tourism~'hotel|motel'  [0x2b01 resolution 24]
+tourism~'hotel|motel' [0x2b01 resolution 24]
 tourism~'alpine_hut|bed_and_breakfast|guest_house|hostel'  [0x2b02 resolution 24]
 tourism~'wilderness_hut' { name '${name} [${ele}]' | '${name}' | '[${ele}]' } [0x2b00 resolution 24 default_name 'Hut']
 tourism~'camping|camp_site|caravan_site' [0x2b03 resolution 22 ]
