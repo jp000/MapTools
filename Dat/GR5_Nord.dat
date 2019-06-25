@@ -1,6 +1,4 @@
-data=[out:xml];
-rel(46.37666204998081,5.372314453125,49.80254124506291,8.1298828125)[~"ref|name"~"GR 5$",i][type=route][route~"hiking|foot"] -> .a;
-(
-    (.a >>; way(r);node(w);node(around:400);<;);
-);
+data=[out:xml][timeout:900][maxsize:1073741824];
+rel["name"~"GR 5 ", i][type=route][route=hiking](46.3791,3.8177,52.00179, 7.54211);
+(>>; way(r);node(w);node(around:1000);<;); 
 out body;

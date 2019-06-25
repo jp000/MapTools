@@ -46,12 +46,15 @@ def processPoi(filename):
                     cmt = getattr(feature.properties, 'desc', '')
                     if cmt == '':
                         cmt = getattr(feature.properties, 'info', '')
-
+                symbol = getattr(feature.properties, 'marker-symbol', '')
+                if symbol == '':
+                    symbol = 'Waypoint'
                 fp.write(template2.format(dt, feature.geometry.coordinates[1], feature.geometry.coordinates[0], 0,
                                           getattr(feature.properties, 'name', ''),
                                           cmt,
-                                          getattr(feature.properties, 'marker-symbol', 'Waypoint'), 100))
+                                          symbol, 100))
         fp.write(template3)
+        print('Created: {}'.format(outputName))
 
 if __name__ == '__main__':
     import sys, wx

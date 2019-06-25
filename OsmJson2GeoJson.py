@@ -3,7 +3,12 @@ import os
 import re
 import json
 from datetime import datetime
-from types import SimpleNamespace as Namespace
+
+try:
+    from types import SimpleNamespace as Namespace
+except ImportError:
+    # Python 2.x fallback
+    from argparse import Namespace
 
 
 def Process(filename, full=False):

@@ -95,11 +95,10 @@ def main():
 
     class MyApp(wx.App):
         def OnInit(self):
-            self.dialog = MapDialog(None, wx.ID_ANY, "")
-            self.dialog.processFile = display
-            self.SetTopWindow(self.dialog)
-            self.dialog.ShowModal()
-            self.dialog.Destroy()
+            self.frame = MapDialog(None, wx.ID_ANY, "")
+            self.frame.processFile = display
+            self.SetTopWindow(self.frame)
+            self.frame.Show()
             return True
 
     app = MyApp(0)

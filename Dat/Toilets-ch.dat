@@ -4,10 +4,9 @@ node[place=hamlet](area.ch) -> .p1;
 node[place=village](area.ch) -> .p2;
 node[place=city](area.ch) -> .p3;
 node[place=town](area.ch) -> .p4;
-node[place=suburb](area.ch) -> .p5;
+node[place=isolated_dwelling](area.ch) -> .p5;
 node[amenity=toilets](area.ch) -> .a1;
 (
 .p1;.p2;.p3;.p4;.p5;.a1;
 );
-( ._;node(around:75);<;<<;); 
 out body;
