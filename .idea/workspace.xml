@@ -2,10 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76baaef3-d929-4c6a-b7c1-914db155bb74" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Json2Overpass.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapDialog.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyDialog - Copie.wxg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyDialog.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyDialog.wxg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyEmoji.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyEomji.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFrame.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFrame.wxg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Osm2Gpx.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OsmFind.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OsmJson2GeoJson.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Osmgen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverpassApi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poi2Gpx.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Styles/e10/lines" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/e10/lines" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Styles/e10/name" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/e10/name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Styles/e10/points" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/e10/points" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/e10/polygons" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/e10/polygons" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Styles/e10/relations" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/e10/relations" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Swap.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bbbikeExtract.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/e10/lines" beforeDir="false" afterPath="$PROJECT_DIR$/e10/lines" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e10/points" beforeDir="false" afterPath="$PROJECT_DIR$/e10/points" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e10/relations" beforeDir="false" afterPath="$PROJECT_DIR$/e10/relations" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +37,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Scripts/Poi2Gpx.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="84" column="3" selection-start-line="84" selection-start-column="3" selection-end-line="84" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>-A</find>
+      <find>UseMenu</find>
+      <find>FileHistory</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Usr\Maps\MapTools</dir>
@@ -37,6 +75,8 @@
         <option value="$PROJECT_DIR$/Osm2Gpx.py" />
         <option value="$PROJECT_DIR$/Json2Overpass.py" />
         <option value="$PROJECT_DIR$/MapDialog.py" />
+        <option value="$PROJECT_DIR$/Scripts/BDialog.py" />
+        <option value="$PROJECT_DIR$/Scripts/Poi2Gpx.py" />
       </list>
     </option>
   </component>
@@ -64,12 +104,22 @@
     </entry>
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MapTools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MapTools" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -88,7 +138,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Json2Overpass">
+  <component name="RunManager" selected="Python.Poi2Gpx">
+    <configuration name="BDialog" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="maptools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/BDialog.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Json2Overpass" type="PythonConfigurationType" factoryName="Python">
       <module name="maptools" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,27 +223,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Osm2Gpx" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="maptools" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Osm2Gpx.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="OverpassApi" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="maptools" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -186,6 +236,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OverpassApi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Poi2Gpx" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="maptools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/Poi2Gpx.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -215,43 +286,22 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="core" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="maptools" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="C:/Python36/Lib/site-packages/certifi" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:/Python36/Lib/site-packages/certifi/core.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
+      <item itemvalue="Python.BDialog" />
       <item itemvalue="Python.Json2Overpass" />
       <item itemvalue="Python.MapDialog" />
       <item itemvalue="Python.MyDialog" />
-      <item itemvalue="Python.Osm2Gpx" />
       <item itemvalue="Python.OverpassApi" />
+      <item itemvalue="Python.Poi2Gpx" />
       <item itemvalue="Python.bbbikeExtract" />
-      <item itemvalue="Python.core" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Poi2Gpx" />
+        <item itemvalue="Python.BDialog" />
         <item itemvalue="Python.MyDialog" />
         <item itemvalue="Python.MapDialog" />
         <item itemvalue="Python.OverpassApi" />
-        <item itemvalue="Python.core" />
-        <item itemvalue="Python.Osm2Gpx" />
       </list>
     </recent_temporary>
   </component>
@@ -292,7 +342,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989354" weight="0.32286555" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.30299667" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49964514" weight="0.25749168" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49964514" weight="0.2863485" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32981783" />
@@ -355,13 +405,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MapDialog.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -386,71 +429,42 @@
     <entry file="file://C:/Python36/Lib/site-packages/axdebug/__init__.py" />
     <entry file="file://C:/Python36/Lib/site-packages/axcontrol/__init__.py" />
     <entry file="file://C:/Python36/Lib/site-packages/pylab.py" />
-    <entry file="file://$PROJECT_DIR$/Osm2Gpx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="253" column="14" lean-forward="true" selection-start-line="253" selection-start-column="14" selection-end-line="253" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bbbikeExtract.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-647">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OverpassApi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OsmJson2GeoJson.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Osm2Gpx.py" />
+    <entry file="file://$PROJECT_DIR$/bbbikeExtract.py" />
+    <entry file="file://$PROJECT_DIR$/OverpassApi.py" />
+    <entry file="file://$PROJECT_DIR$/OsmJson2GeoJson.py" />
+    <entry file="file://$PROJECT_DIR$/Tools.py" />
+    <entry file="file://$PROJECT_DIR$/MapDialog.py" />
+    <entry file="file://$PROJECT_DIR$/MyDialog.py" />
+    <entry file="file://$PROJECT_DIR$/Json2Overpass.py" />
     <entry file="file://$PROJECT_DIR$/../../Python36/Lib/site-packages/wx/core.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-501">
+        <state relative-caret-position="17">
           <caret line="2165" selection-start-line="2165" selection-end-line="2165" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tools.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MapDialog.py">
+    <entry file="file://$PROJECT_DIR$/Scripts/BFrame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state relative-caret-position="204">
+          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/BDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/Poi2Gpx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="84" column="3" selection-start-line="84" selection-start-column="3" selection-end-line="84" selection-end-column="3" />
           <folding>
-            <element signature="e#46#55#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyDialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Json2Overpass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
         </state>
       </provider>
     </entry>

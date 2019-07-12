@@ -1,46 +1,86 @@
+include "name"; 
+
+place=city & population > 999999 & name=* [0x0100 resolution 12]
+place=city & population > 799999 & name=* [0x0200 resolution 14]
+place=city & population > 399999 & name=* [0x0300 resolution 15]
+place=city & population > 299999 & name=* [0x0400 resolution 16]
+place=city & population > 199999 & name=* [0x0500 resolution 16]
+place=city & population >  99999 & name=* [0x0600 resolution 16]
+place=city & population >  49999 & name=* [0x0700 resolution 16]
+place=city & population >   9999 & name=* [0x0800 resolution 16]
+
+place=city & population >      0 & name=* [0x0800 resolution 18]
+place=city                       & name=* [0x0700 resolution 18]
+
+place=town & population >  69999 & name=* [0x0600 resolution 16]
+place=town & population >  19999 & name=* [0x0700 resolution 16]
+place=town & population >   9999 & name=* [0x0800 resolution 16]
+place=town & population >   4999 & name=* [0x0900 resolution 16]
+place=town & population >    999 & name=* [0x0a00 resolution 18]
+place=town & population >      0 & name=* [0x0b00 resolution 18]
+place=town                       & name=* [0x0800 resolution 18]
+
+place=village                    & name=* [0x0900 resolution 19]
+place=suburb                     & name=* [0x0a00 resolution 22]
+place=hamlet                     & name=* [0x0b00 resolution 24]
+
+place=island & name=* [0x650c resolution 18]
+place=islet  & name=* [0x650c resolution 20]
+
 include "abbreviations";
 
-place=city {name '${name}'} [0x0600 resolution 16]
-place=town {name '${name}'} [0x0700 resolution 16]
-place=village {name '${name},${ele}'|'${name}'} [0x0b00 resolution 18]
-place=hamlet {name '${name},${ele}'|'${name}'} [0x1100 resolution 24]
-place=isolated_dwelling {name '${name},${ele}'|'${name}'} [0x611b resolution 24]
-place=island {name '${name}'} [0x650c resolution 18]
-#place=locality {name '${name}'} [0x0c00 resolution 24]
 
 amenity=bbq|tourism=picnic_site [0x4a00 resolution 22 default_name 'Bbq']
 leisure=firepit & access=official [0x4a00 resolution 22 default_name 'Bbq']
 leisure=firepit [0x4a00 resolution 22 default_name 'Bbq']
 
-tourism=viewpoint { name '${name}' | '${description}' } [0x5200 resolution 18]
+tourism=viewpoint [0x5200 resolution 22]
+tourism=information | information=guidepost {name '${name} [${ele}]' | '${name}' } [0x4c00 resolution 20]
 
-tourism=hotel|tourism=motel {name '${name}' | '${tourism}'} [0x2b01 resolution 22]
-tourism=bed_and_breakfast|tourism=guest_house|tourism=hostel {name '${name}' | '${tourism}'} [0x2b02 resolution 24]
-tourism=alpine_hut|tourism=wilderness_hut {name '${name}' | '${tourism}'} [0x2b02 resolution 20 default_name 'Hut']
+tourism~'hotel|motel' [0x2b01 resolution 24]
+tourism~'alpine_hut|bed_and_breakfast|guest_house|hostel' [0x2b02 resolution 24]
+tourism~'wilderness_hut' { name '${name} [${ele}]' | '${name}' } [0x2b00 resolution 24 default_name 'Hut']
+tourism~'camping|camp_site|caravan_site' [0x2b03 resolution 24 ]
 
-amenity=shelter & shelter_type~'weather_shelter|basic_hut|lean_to|picnic_shelter|rock_shelter|sun_shelter' {name '${name}' | '${shelter_type}'} [0x4a00 resolution 18 default_name 'R']
+amenity=shelter & shelter_type~'weather_shelter|basic_hut|lean_to|picnic_shelter|rock_shelter|sun_shelter' [0x4a00 resolution 18 default_name 'R']
 
-tourism=camping|tourism=camp_site [0x2b03 resolution 18 default_name 'Camping']
+amenity~'restaurant'  [0x2a00 resolution 24]
+amenity~'biergarten|bar|pub|cafe'  [0x2a0e resolution 24]
+amenity=fast_food [0x2a07 resolution 24]
 
-amenity~'biergarten|cafe|restaurant|bar|pub' {name '${name}' | '${amenity}'}  [0x4600 resolution 24 default_name 'pub']
-amenity=toilets [0x4e00 resolution 22 default_name 'Wc']
-amenity=drinking_water|drinking_water=yes|drinkable=yes [0x5000 resolution 22 default_name 'Eau']
+amenity=toilets [0x4e00 resolution 20 default_name 'Wc']
+amenity=drinking_water|drinking_water=yes|drinkable=yes [0x5000 resolution 20 default_name 'W']
 
-amenity=shower {name '${name}' | '${amenity}'} [0x4F00 resolution 22]
+amenity=shower  [0x4F00 resolution 22]
 
-shop~'mall|supermarket|convenience|general|greengrocer|bakery|bakers|seafood|beverages' {name '${name}' | '${shop}'} [0x2e02 resolution 24 default_name 'Shop']
+shop=mall  [0x2e04 resolution 24]
+shop=supermarket [0x2e02 resolution 24 default_name 'Market']
+shop~'convenience|general|greengrocer|bakery|bakers|seafood|beverages' [0x2e00 resolution 24 default_name 'Shop']
+shop=chemist|amenity=pharmacy  [0x2e05 resolution 24 default_name 'Ph']
 
-#amenity=bench [0x4a01 resolution 22 default_name 'B']
+natural=peak  [0x6616 resolution 20]
+natural=volcano  [0x6616 resolution 20]
+#natural=cliff  [0x6607 resolution 24]
 
-natural=peak {name '${name}' } [0x6616 resolution 20]
-natural=volcano {name '${name}' } [0x6616 resolution 20]
-#natural=cliff {name '${name}' } [0x6607 resolution 24]
+natural=beach [0x6604 resolution 24]
+natural=glacier [0x650a resolution 24]
+natural=spring [0x6511 resolution 24]
+natural=stream [0x6512 resolution 24]
+natural=water & (water=canal | water=lock) [0x6505 resolution 24]
+natural=water [0x6603 resolution 24]
+natural=waterfall | waterway=waterfall [0x6508 resolution 24]
+natural=wetland  [0x6513 resolution 24]
 
-public_transport=platform | highway=bus_stop  {name '${ref}'} [0x2F08 resolution 24]
+#public_transport=platform | highway=bus_stop  {name '${name}'} [0x2F08 resolution 24]
+(highway=bus_stop | railway=tram_stop | railway=halt | railway=station) [0x2F08 resolution 24]
 
 #barrier~'gate|lift_gate|swing_gate|bump_gate|bollard|block|chain' [0x0e00 resolution 24 default_name 'G']
 barrier=toll_booth [0x0e00 resolution 22 default_name 'G']
 
-information=guidepost & name=* { name '${name} ${ele}' | '${name}' } [0x4c00 resolution 22]
+healthcare=hospital | amenity=hospital | amenity=clinic [0x3002 resolution 22]
+healthcare=* | amenity=dentist | amenity=doctors [0x3002 resolution 24]
 
 #mkgmap:line2poi=true & mkgmap:line2poitype=mid & highway=steps [0x2810 resolution 22 default_name 'Step'] 
+
+<finalize>
+name=* {name '${name}'}

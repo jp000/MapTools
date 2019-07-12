@@ -1,5 +1,7 @@
 # Etrex 10 mapping rules
 
+#include "name"; 
+
 route_bus=* {set route_bus='[${route_bus}]' }
 route_bik=* {set route_bik='(${route_bik})' }
 route_hik=* {set route_hik='${route_hik}' }
@@ -80,8 +82,8 @@ highway=* {name '${name}' }
 
 
 # Roundabouts
-junction=roundabout & highway=trunk [0x07 road_class=0  resolution 16]
-junction=roundabout & highway=primary [0x07 road_class=0  resolution 16]
+junction=roundabout & highway=trunk [0x07 road_class=0  resolution 18]
+junction=roundabout & highway=primary [0x07 road_class=0  resolution 18]
 junction=roundabout & highway=secondary [0x07 road_class=0  resolution 18]
 junction=roundabout & highway=tertiary [0x07 road_class=0  resolution 18]
 junction=roundabout & highway=unclassified [0x07 road_class=0  resolution 18]
@@ -123,8 +125,13 @@ natural=coastline [0x15 resolution 16]
 railway~'light_rail|narrow_gauge|funicular' {set railway=rail}
 railway=rail [0x14 resolution 18]
 
-waterway~'river|canal|drain' & tunnel!=yes {name '${name}'} [0x1f resolution 18]
-waterway=stream & tunnel!=yes [0x18 resolution 22]
+route=ferry & (toll=no | toll=false) {set mkgmap:toll=no}
+route=ferry {set mkgmap:numbers=false; set mkgmap:ferry=1; add mkgmap:toll=yes}
+route=ferry & (motorcar=no | motor_vehicle=no) [0x1b road_class=0 road_speed=0 resolution 23]
+route=ferry [0x1a road_class=3 road_speed=0 resolution 19]
 
-aerialway~'cable_car|gondola|chair_lift|mixed_lift' { name '${name}' | '${aerialway}' } [0x38 default_name "Ski" resolution 22]
+waterway~'river|canal|drain' & tunnel!=yes {name '${name}'} [0x1f resolution 18]
+waterway=stream & tunnel!=yes {name '${name}'} [0x18 resolution 22]
+
+aerialway~'cable_car|gondola|chair_lift|mixed_lift' [0x38 default_name "Ski" resolution 22]
 #route_ref=* {name '${route_ref}' } [0x07 road_class=0  resolution 18]

@@ -11,6 +11,8 @@
 # and http://wiki.openstreetmap.org/wiki/Mkgmap/help/Custom_styles
 # for more information.
 
+include "name"; 
+
 # Names of administrative boundaries.
 # We could want to sort the relations in ascending order of admin_level
 # and alphabetically by name first.
@@ -48,10 +50,10 @@ type=route & (route=hiking|route=foot)
   apply {
 	set route_hik='$(route_hik),${ref|not-contained:,:route_hik}' | '$(route_hik)' | '${ref}';
     set mkgmap:relref='${ref}';
-    delete mkgmap:relref;
     #echotags 'route_hik';
 
   }
+    delete mkgmap:relref;
 }
 
 type=route & (route=bicycle|route=mtb) & (ref=* | name=*)
@@ -61,9 +63,9 @@ type=route & (route=bicycle|route=mtb) & (ref=* | name=*)
   apply {
 	set route_bik='$(route_bik),${ref|not-contained:,:route_bik}' | '$(route_bik)' | '${ref}';
     set mkgmap:relref='${ref}';
-    delete mkgmap:relref;
 	#echotags 'route_bik';
   }
+    delete mkgmap:relref;
 }
 
 #any highway
