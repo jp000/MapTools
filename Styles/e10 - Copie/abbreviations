@@ -1,0 +1,106 @@
+# name all roads
+highway=* { set short_name = '${name}' | '' }
+
+# Dutch abbreviation rules
+highway=* { set short_name = '${short_name|subst:Straat~>Str|subst:straat$~>str}' }
+highway=* { set short_name = '${short_name|subst:Plein~>Pl|subst:plein$~>pl}' }
+
+# English abbreviation rules
+highway=* { set short_name = '${short_name|subst: (?i)Avenue$~> Av}' }
+highway=* { set short_name = '${short_name|subst: (?i)Boulevard$~> Bvd}' }
+highway=* { set short_name = '${short_name|subst: (?i)Crescent$~> Cres}' }
+highway=* { set short_name = '${short_name|subst: (?i)Drive$~> Drv}' }
+highway=* { set short_name = '${short_name|subst: (?i)Highway$~> Hwy}' }
+highway=* { set short_name = '${short_name|subst: (?i)Lane$~> Ln}' }
+highway=* { set short_name = '${short_name|subst: (?i)Road$~> Rd}' }
+highway=* { set short_name = '${short_name|subst: (?i)Street$~> St}' }
+highway=* { set short_name = '${short_name|subst: (?i)Street ~> St }' }
+
+# French abbreviation rules
+highway=* { set short_name = '${short_name|subst:^(?i)Rue ~>R }' }
+highway=* { set short_name = '${short_name|subst:^(?i)Boulevard ~>Bvd }' }
+highway=* { set short_name = '${short_name|subst:^(?i)Avenue ~>Av }' }
+highway=* { set short_name = '${short_name|subst:^(?i)Place ~>Pl }' }
+highway=* { set short_name = '${short_name|subst:^(?i)Chemin ~>Ch }' }
+highway=* { set short_name = '${short_name|subst:^(?i)Route ~>Rte }' }
+highway=* { set short_name = '${short_name|subst:^(?i)Allée ~>Al }' }
+highway=* { set short_name = '${short_name|subst:^(?i)Promenade ~>Pro }' }
+highway=* { set short_name = '${short_name|subst:^(?i)Corniche ~>Cor }' }
+
+# German abbreviation rules
+highway=* { set short_name = '${short_name|subst:Straße~>Str|subst:straße$~>str}' }
+highway=* { set short_name = '${short_name|subst:Strasse~>Str|subst:strasse$~>str}' }
+highway=* { set short_name = '${short_name|subst:Platz~>Pl|subst:platz$~>pl}' }
+highway=* { set short_name = '${short_name|subst:Weg$~>W|subst:weg$~>w}' }
+highway=* { set short_name = '${short_name|subst:Gasse$~>G|subst:gasse$~>g}' }
+
+# Italian abbreviation rules
+highway=* { set short_name = '${short_name|subst:^(?i)Via ~>V }' }
+highway=* { set short_name = '${short_name|subst:^(?i)Strada ~>St }' }
+highway=* { set short_name = '${short_name|subst:^(?i)Corso ~>Co }' }
+highway=* { set short_name = '${short_name|subst:^(?i)Salita ~>Sal }' }
+
+# Spanish abbreviation rules
+highway=* { set short_name = '${short_name|subst:^(?i)calle ~>C }' }
+highway=* { set short_name = '${short_name|subst:^(?i)carrer ~>Cr }' }
+highway=* { set short_name = '${short_name|subst:^(?i)avenida ~>Av }' }
+
+# Swedish abbreviation rules
+highway=* { set short_name = '${short_name|subst:(?i)gatan$~>g}' }
+highway=* { set short_name = '${short_name|subst:(?i)gata$~>g}' }
+highway=* { set short_name = '${short_name|subst:(?i)vägen$~>v}' }
+highway=* { set short_name = '${short_name|subst:(?i)väg$~>v}' }
+
+highway=* { name '${ref} (${short_name})' | '${short_name}' | '${ref}' }
+
+
+# name all places of worship
+
+amenity=place_of_worship { set short_name = '${name}' | '' }
+
+# English abbreviation rules
+amenity=place_of_worship { set short_name = '${short_name|subst:Church ~>Ch }' }
+amenity=place_of_worship { set short_name = '${short_name|subst:church$~>ch}' }
+amenity=place_of_worship { set short_name = '${short_name|subst:Church$~>Ch}' }
+
+# German abbreviation rules
+amenity=place_of_worship { set short_name = '${short_name|subst:Kirche ~>K }' }
+amenity=place_of_worship { set short_name = '${short_name|subst:kirche ~>k }' }
+amenity=place_of_worship { set short_name = '${short_name|subst:kirche$~>k}' }
+
+amenity=place_of_worship { name '${short_name}' | '[PoW]' }
+
+
+# name lakes and water bodies
+
+natural=water { set short_name = '${name}' | '' }
+
+# English abbreviation rules
+
+natural=water { set short_name = '${short_name|subst:Lake ~>L }' }
+
+natural=water { name '${short_name}' }
+
+
+# name all natural peaks and the like
+
+natural=peak | natural=volcano | natural=glacier {
+	set short_name = '${name}' | ''
+}
+
+# English abbreviation rules
+natural=peak | natural=volcano | natural=glacier {
+	set short_name = '${short_name|subst:^Mount ~>Mt }'
+}
+natural=peak | natural=volcano | natural=glacier {
+	set short_name = '${short_name|subst: [P]eak$~> Pk}'
+}
+
+natural=peak | natural=volcano | natural=glacier {
+	set short_name = '${short_name|subst:(?i)Mont ~>Mt }'
+}
+
+natural=peak { name '${short_name} (${ele})' | '${short_name}' | '[peak]' }
+natural=peak { name '${name} (${ele})' | '[peak]' }
+natural=volcano { name '${short_name} (${ele})' | '${short_name}' | '[volcano]' }
+natural=glacier { name '${short_name} (${ele})' | '${short_name}' | '[glacier]' }

@@ -1,6 +1,6 @@
 # Etrex 10 mapping rules
 
-#include "name"; 
+include "name"; 
 
 route_bus=* {set route_bus='[${route_bus}]' }
 route_bik=* {set route_bik='(${route_bik})' }

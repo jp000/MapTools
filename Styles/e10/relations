@@ -50,10 +50,10 @@ type=route & (route=hiking|route=foot)
   apply {
 	set route_hik='$(route_hik),${ref|not-contained:,:route_hik}' | '$(route_hik)' | '${ref}';
     set mkgmap:relref='${ref}';
-    delete mkgmap:relref;
     #echotags 'route_hik';
 
   }
+    delete mkgmap:relref;
 }
 
 type=route & (route=bicycle|route=mtb) & (ref=* | name=*)
@@ -63,9 +63,9 @@ type=route & (route=bicycle|route=mtb) & (ref=* | name=*)
   apply {
 	set route_bik='$(route_bik),${ref|not-contained:,:route_bik}' | '$(route_bik)' | '${ref}';
     set mkgmap:relref='${ref}';
-    delete mkgmap:relref;
 	#echotags 'route_bik';
   }
+    delete mkgmap:relref;
 }
 
 #any highway
