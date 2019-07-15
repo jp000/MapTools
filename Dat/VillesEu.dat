@@ -1,6 +1,6 @@
 data=[out:xml];
-
-node(34.52466147177172,-12.12890625,71.55274065141299,42.1875)[place~'city|town'](if: t["population"] > 6000);
+area["ISO3166-1"="CH"][admin_level=2] -> .a;
+node(area.a)[place~'city|town|suburb'](if: t["population"] > 6000);
 (._;>;);
 
 out body;
