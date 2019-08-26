@@ -1,6 +1,6 @@
 @set sname=%~n1
 @set osmname=%sname%.osm
-@set opts=--gmapsupp --latin1 --make-poi-index --add-pois-to-areas --ignore-fixme-values --check-styles
+@set opts=--gmapsupp --latin1 --add-pois-to-areas --ignore-fixme-values --check-styles
 ::@set opts=--gmapsupp --latin1 --make-poi-index --add-pois-to-lines --add-pois-to-areas --ignore-fixme-values --check-styles
 @set opts1=--family-id=1000 --product-id=1
 @set style=--style-file="..\Styles\e10"
@@ -12,7 +12,12 @@
 @set server5="https://overpass.kumi.systems/api/interpreter"
 @set server=%server3%
 
-@if not %3. == . set style=--style=%3
+@if %4. == -r. set opts=%opts% --route
+@if %4. == -R. set opts=%opts% --route
+
+@if not %3. == . set style=--style-file="..\Styles\%~3"
+@if not %3. == . set type="..\Styles\%~3.typ"
+
 @if %2. == -f. goto wget
 @if %2. == -F. goto wget
 @if Exist "%osmname%" goto skipGet
@@ -30,7 +35,6 @@ java -Xmx6000m -jar "..\mkgmap\mkgmap.jar" %opts% %style% %opts1% --output-dir="
 @del ".\output\%sname%\gmapsupp.img"
 @del ".\output\%sname%\osmmap.tdb"
 @del ".\output\%sname%\osmmap.img"
-::@del ".\output\%sname%\e10.typ"
 @del ".\output\%sname%\63240001.img"
 
 goto done

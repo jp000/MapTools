@@ -1,0 +1,7 @@
+data=[out:xml][timeout:900][maxsize:1073741824];
+(
+area[name~"Schweiz"][boundary=administrative][admin_level=2];
+)->.ch;
+rel[name="Sentier planétaire Marly"][type=route][route~"hiking|foot"](area.ch);
+(>>;>;node(around:1500);<;); 
+out body;

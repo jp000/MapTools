@@ -1,0 +1,4 @@
+data=[out:xml];
+rel[name~"GR 65[^0-9]*", i][type=route][route~"hiking|foot"];
+(>>; way(r);node(w);node(around:500);<;); 
+out body;
