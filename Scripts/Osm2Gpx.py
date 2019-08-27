@@ -172,6 +172,7 @@ def CreateGpx(handler, fileName, approx, debug=False):
 	<extensions>
 		<gpxx:WaypointExtension>
 			<gpxx:Proximity>150</gpxx:Proximity>
+            <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
 		</gpxx:WaypointExtension>
 	</extensions>
   </wpt>

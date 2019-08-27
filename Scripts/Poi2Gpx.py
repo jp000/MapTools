@@ -25,11 +25,12 @@ def processPoi(filename):
         <name>{4}</name>
         <cmt>{5}</cmt>
         <sym>{6}</sym>
-    	<extensions>
-    		<gpxx:WaypointExtension>
-    			<gpxx:Proximity>{7}</gpxx:Proximity>
-    		</gpxx:WaypointExtension>
-    	</extensions>
+        <extensions>
+            <gpxx:WaypointExtension>
+                <gpxx:Proximity>{7}</gpxx:Proximity>
+                <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+            </gpxx:WaypointExtension>
+        </extensions>
       </wpt>
     '''
     template3 = '</gpx>'

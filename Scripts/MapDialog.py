@@ -13,7 +13,7 @@ class MapDialog(MyFrame.MyFrame):
         super(MapDialog, self).__init__(*args, **kwds)
 #        _icon = MyEmoji.img.GetIcon()
 #        self.SetIcon(_icon)
-        
+
 
     def onToolOpen(self, event):
         with wx.FileDialog(None, "Select a file", wildcard='GEOJSON|*.geojson|All (*.*)|*.*',

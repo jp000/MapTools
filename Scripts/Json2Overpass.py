@@ -96,6 +96,7 @@ def main():
     class MyApp(wx.App):
         def OnInit(self):
             self.frame = MapDialog(None, wx.ID_ANY, "")
+            self.frame.Title = "Json2Overpass"
             self.frame.processFile = display
             self.SetTopWindow(self.frame)
             self.frame.Show()
