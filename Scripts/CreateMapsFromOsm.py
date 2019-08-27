@@ -292,16 +292,29 @@ if __name__ == '__main__':
                     )
         startId = ProcessGeoFabrik(urlRoot, osmFiles, 43300001)
 
-    if True:
+    if False:
+        urlRoot = 'https://download.geofabrik.de/europe/germany/'
+        osmFiles = ('baden-wuerttemberg-latest.osm.pbf',
+                    'bayern-latest.osm.pbf',
+                    'https://download.geofabrik.de/europe/germany/saarland-latest.osm.pbf',
+                    'https://download.geofabrik.de/europe/germany/rheinland-pfalz-latest.osm.pbf'
+                    )
+        startId = ProcessGeoFabrik(urlRoot, osmFiles, 4440001)
+ 
+    if False:
+        urlRoot = 'https://download.geofabrik.de/europe/'
+        startId = ProcessGeoFabrik(urlRoot, 'austria-latest.osm.pbf', 44300001)
+ 
+    if False:
         urlRoot = 'https://download.geofabrik.de/europe/'
         startId = ProcessGeoFabrik(urlRoot, 'cyprus-latest.osm.pbf', 43900001)
 
     if False:
-        urlRoot = 'https://download.geofabrik.de/australia-oceania//'
+        urlRoot = 'https://download.geofabrik.de/australia-oceania/'
         osmFiles = ('australia-latest.osm.pbf',
                     'new-zealand-latest.osm.pbf',
                     )
-        startId = ProcessGeoFabrik(urlRoot, osmFiles, 43910001)
+        startId = ProcessGeoFabrik(urlRoot, osmFiles, 46100001)
 
     cleanup()
 
