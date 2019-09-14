@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76baaef3-d929-4c6a-b7c1-914db155bb74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Scripts/CreateMapsFromOsm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Get.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Get.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyDialog - Copie.wxg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Styles/e10/relations" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/e10/relations" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/CreateMapsFromOsm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/CreateMapsFromOsm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Json2Overpass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Json2Overpass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Osm2Gpx.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Osm2Gpx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Poi2Gpx.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Poi2Gpx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Tmp.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Tmp.dat" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -291,7 +293,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/CreateMapsFromOsm.py</url>
-          <line>44</line>
+          <line>36</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

@@ -1,1 +1,1 @@
-data=[out:xml];area["ISO3166-2"="CH-VD"];(node(area););( ._;<;<<;);out body;
+data=[out:xml][timeout:600][maxsize:1073741824];is_in(46.77779,7.16022)->.a;area.a[boundary=administrative][admin_level=6];(node(area););( ._;<;<<;);
