@@ -23,7 +23,7 @@ servers = (r'http://overpass-api.de/api/interpreter',
 
 dnldDir1 = r'C:\Users\JPE\Downloads'
 dnldDir = r'C:\Usr\Maps\Osm'
-StyleDir = r'C:\Usr\Maps\Styles'
+StyleDir = r'c:\Usr\Maps\MapTools\Styles'
 outDir = r'C:\Usr\Maps\output'
 mkgmapJar = r'C:\Usr\Maps\mkgmap\mkgmap.jar'
 splitterJar = r'C:\Usr\Maps\splitter\splitter.jar'
@@ -36,13 +36,14 @@ if not os.path.exists(dnldDir):
 def fileAge(file_path):
     if not os.path.exists(file_path):
         return 36500
-    return (datetime.now() - datetime.fromtimestamp(path.getctime(file_path))).days
+    return (datetime.now() - datetime.fromtimestamp(path.getmtime(file_path))).days
 
 
 def doOverpass(outputfilename, query, server=servers[2], bbox=None):
     tmp = os.path.join(os.path.dirname(outputfilename), 'Tmp.dat')
     if bbox is None:
-        data = f'data=[out:xml][timeout:600][maxsize:1073741824];{query}'
+        #data = f'data=[out:xml][timeout:600][maxsize:1073741824];{query}'
+        data = f'data=[out:xml][timeout:600][maxsize:2147483648];{query}'
     else:
         # data=[bbox];node[amenity=post_box];out body;&bbox=6.4380,43.6490,7.5696,46.375068 (w,s,e,n)
         data = f'data=[out:xml][timeout:600][maxsize:1073741824][bbox];{query}&bbox={bbox}'
@@ -88,7 +89,10 @@ def mkgmap(inputfilename,
            outputDir=outDir):
     poiExclude = '--poi-excl-index=0x2a13,0x2b05,0x2b06,0x2c0d,0x2e0c,0x6619,0x2800'
     styleName = os.path.split(styleDir)[-1]
-    name, ext = os.path.splitext(os.path.basename(inputfilename))
+    if type(inputfilename) is list or type(inputfilename) is tuple:
+        name, ext = os.path.splitext(os.path.basename(inputfilename[0]))
+    else:
+        name, ext = os.path.splitext(os.path.basename(inputfilename))
     if ext == '.args':
         inputfilename = f'-c "{inputfilename}"'
         mapName = ''
@@ -97,7 +101,11 @@ def mkgmap(inputfilename,
     else:
         if mapDescription is None:
             mapDescription = name + '_' + styleName
-        inputfilename = f'"{inputfilename}"'
+
+        if type(inputfilename) is list or type(inputfilename) is tuple:
+            inputfilename = f' '.join([f'"{x}"' for x in inputfilename])
+        else:
+            inputfilename = f'"{inputfilename}"'
         mapName = f'--mapname={mapId} '
 
     route = '--route ' if hasRoute else ''
@@ -196,7 +204,7 @@ def cleanup(root=outDir):
 
 
 def ProcessGeoFabrik(urlRoot, osmFile, startId):
-    _startId = startId
+    _startId = lastId = startId
     if type(osmFile) is not list and type(osmFile) is not tuple:
         osmFile = (osmFile,)
     for _osmfile in osmFile:
@@ -209,12 +217,10 @@ def ProcessGeoFabrik(urlRoot, osmFile, startId):
 
             if template is not None:
                 lastId = FindLastMapId(template)
-            #                _startId = startId
-            #                lastId = updateMapId(template, startId)
                 mkgmap(template, styleDir=os.path.join(StyleDir, 'e20x'),
                        typeFile=os.path.join(StyleDir, 'e20x.typ'), mapDescription='E20_' + mapname)
             startId = lastId + 1
-    return lastId - 1, _startId
+    return lastId, _startId
 
 
 def GeoFabrik():
@@ -227,7 +233,7 @@ def GeoFabrik():
         (0, 43400000, 'https://download.geofabrik.de/europe/', 'spain-latest.osm.pbf'),
         (0, 43570000, 'https://download.geofabrik.de/europe/', 'cyprus-latest.osm.pbf'),
         (0, 43900000, 'https://download.geofabrik.de/europe/', 'italy-latest.osm.pbf'),
-        (1, 44100000, 'https://download.geofabrik.de/europe/', 'switzerland-latest.osm.pbf'),
+        (0, 44100000, 'https://download.geofabrik.de/europe/', 'switzerland-latest.osm.pbf'),
         (0, 44300000, 'https://download.geofabrik.de/europe/', 'austria-latest.osm.pbf'),
         (0, 44400000, 'https://download.geofabrik.de/europe/', 'great-britain-latest.osm.pbf'),
         (0, 44900000, 'https://download.geofabrik.de/europe/', 'germany-latest.osm.pbf'),
@@ -295,6 +301,15 @@ if __name__ == '__main__':
     #        mkgmap(template, styleDir=os.path.join(StyleDir, 'e20x'), typeFile=os.path.join(StyleDir, 'e20x.typ'), mapDescription='GR5Sud_E20')
 
     if True:
+        q1 = 'node(-58.0,-180.0,0.0,180.0)[place~"city|town"](if: t["population"] >= 4000);out body;'
+        q2 = 'node(0.0,-180.0,40.0,180.0)[place~"city|town"](if: t["population"] >= 4000);out body;'
+        q3 = 'node(40.0,-180.0,83.0,180.0)[place~"city|town"](if: t["population"] >= 4000);out body;'
+        doOverpass('.\Villes1.osm', query=q1)
+        doOverpass('.\Villes2.osm', query=q2)
+        doOverpass('.\Villes3.osm', query=q3)
+        mkgmap(('.\Villes1.osm', '.\Villes2.osm', '.\Villes3.osm'), hasRoute=False, styleDir=r'\Usr\Maps\MapTools\Styles\E20x', typeFile=r'\Usr\Maps\MapTools\Styles\E20x.typ', mapId=99990000, mapDescription='E20_Villes')
+
+    if False:
         # https://extract.bbbike.org?sw_lng=13.215&sw_lat=41.951&ne_lng=19.964&ne_lat=46.231&format=osm.pbf&coords=14.962%2C43.213%7C17.114%2C42.102%7C19.86%2C41.951%7C19.964%2C42.825%7C17.575%2C44.192%7C14.373%2C46.231%7C13.215%2C45.478%7C13.979%2C44.309&city=Yougoslavie&lang=en
         template = mkgsplit(os.path.join(dnldDir1, 'planet_15.731_43.069_8e27d44d.osm.pbf'),description='Yougoslavie',
              mapId=93850000)

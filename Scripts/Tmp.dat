@@ -1,1 +1,1 @@
-data=[out:xml][timeout:600][maxsize:1073741824];is_in(46.77779,7.16022)->.a;area.a[boundary=administrative][admin_level=6];(node(area););( ._;<;<<;);
+data=[out:xml][timeout:600][maxsize:2147483648];node(40.0,-180.0,83.0,180.0)[place~"city|town"](if: t["population"] >= 4000);out body;
