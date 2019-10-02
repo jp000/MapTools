@@ -1,1 +1,0 @@
-data=[out:xml][timeout:600][maxsize:2147483648];node(40.0,-180.0,83.0,180.0)[place~"city|town"](if: t["population"] >= 4000);out body;
