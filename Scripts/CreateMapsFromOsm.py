@@ -23,11 +23,11 @@ servers = (r'http://overpass-api.de/api/interpreter',
 
 dnldDir1 = r'C:\Users\JPE\Downloads'
 dnldDir = r'C:\Usr\Maps\Osm'
-StyleDir = r'c:\Usr\Maps\MapTools\Styles'
+StyleDir = r'c:\Usr\Maps\Tools\MapTools\Styles'
 outDir = r'C:\Usr\Maps\output'
 mkgmapJar = r'C:\Usr\Maps\mkgmap\mkgmap.jar'
 splitterJar = r'C:\Usr\Maps\splitter\splitter.jar'
-wgetExe = r'C:/usr/bin/wget.exe'
+wgetExe = r'C:\usr\bin\wget.exe'
 
 if not os.path.exists(dnldDir):
     os.makedirs(dnldDir)
@@ -301,13 +301,13 @@ if __name__ == '__main__':
     #        mkgmap(template, styleDir=os.path.join(StyleDir, 'e20x'), typeFile=os.path.join(StyleDir, 'e20x.typ'), mapDescription='GR5Sud_E20')
 
     if True:
-        q1 = 'node(-58.0,-180.0,0.0,180.0)[place~"city|town"](if: t["population"] >= 4000);out body;'
-        q2 = 'node(0.0,-180.0,40.0,180.0)[place~"city|town"](if: t["population"] >= 4000);out body;'
-        q3 = 'node(40.0,-180.0,83.0,180.0)[place~"city|town"](if: t["population"] >= 4000);out body;'
+        q1 = 'node(-58.0,-180.0,0.0,180.0)[place~"city|town"](if: t["population"] >= 7000);out body;'
+        q2 = 'node(0.0,-180.0,40.0,180.0)[place~"city|town"](if: t["population"] >= 7000);out body;'
+        q3 = 'node(40.0,-180.0,83.0,180.0)[place~"city|town"](if: t["population"] >= 7000);out body;'
         doOverpass('.\Villes1.osm', query=q1)
         doOverpass('.\Villes2.osm', query=q2)
         doOverpass('.\Villes3.osm', query=q3)
-        mkgmap(('.\Villes1.osm', '.\Villes2.osm', '.\Villes3.osm'), hasRoute=False, styleDir=r'\Usr\Maps\MapTools\Styles\E20x', typeFile=r'\Usr\Maps\MapTools\Styles\E20x.typ', mapId=99990000, mapDescription='E20_Villes')
+        mkgmap(('.\Villes1.osm', '.\Villes2.osm', '.\Villes3.osm'), hasRoute=False, styleDir=os.path.join(StyleDir, 'E20x'), typeFile=os.path.join(StyleDir, 'E20x.typ'), mapId=99990000, mapDescription='E20_Villes')
 
     if False:
         # https://extract.bbbike.org?sw_lng=13.215&sw_lat=41.951&ne_lng=19.964&ne_lat=46.231&format=osm.pbf&coords=14.962%2C43.213%7C17.114%2C42.102%7C19.86%2C41.951%7C19.964%2C42.825%7C17.575%2C44.192%7C14.373%2C46.231%7C13.215%2C45.478%7C13.979%2C44.309&city=Yougoslavie&lang=en

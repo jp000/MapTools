@@ -63,27 +63,32 @@ class OsmNodeHandler(xml.sax.ContentHandler):
         return None
 
 class OsmNodeHandler1(xml.sax.ContentHandler):
-    def __init__(self):
+    def __init__(self, population=0):
         super(OsmNodeHandler1, self).__init__()
-        self.node = None
-        self.gotNode = False
-        self.search = ('city', 'town', 'village')
+        self.lat_lon = None
+        self.inNode= False
+        self.validNode = False
+        self.searchPlaceValues = ('city', 'town', 'village')
+        self.searchKeys = ('name', 'place', 'population')
         self.tags = None
+        self.population = int(population)
 
     def startElement(self, name, attrs):
         if name == 'node':
-            self.node = [float(attrs['lat']), float(attrs['lon'])]
+            self.inNode = True
+            self.lat_lon = [float(attrs['lat']), float(attrs['lon'])]
             self.tags = []
-        if name == 'tag':
-            self.tags.append(attrs)     # save all the tags
-            if attrs['k'] == 'place' and attrs['v'] in self.search:
-                self.gotNode = True
+        if name == 'tag' and self.inNode and attrs['k'] in self.searchKeys:
+            self.tags.append(attrs)
+            if attrs['k'] == 'place' and attrs['v'] in self.searchPlaceValues:
+                self.validNode = True
 
     def endElement(self, name):
-        if name == 'node' and self.gotNode:
-            self.gotNode = False
+        if name == 'node' and self.validNode:
+            self.inNode = False
+            self.validNode = False
             for tag in self.tags:
-                if tag['k'] == 'population' and int(tag['v']) > 1000:    # process only relevant info
+                if tag['k'] == 'population' and int(tag['v']) >= self.population:    # process only relevant info
                     print(self)
                     break
 
@@ -91,25 +96,25 @@ class OsmNodeHandler1(xml.sax.ContentHandler):
         r = []
         for tag in self.tags:
             r.append(f'{tag["k"]}={tag["v"]}')
-        return f'{self.node[0]}:{self.node[1]} {", ".join(r)}'
+        return f'{self.lat_lon[0]}:{self.lat_lon[1]} {", ".join(r)}'
 
-name = r'c:\Usr\Maps\Test\3Rivieres'
+fname = r'c:\Usr\Maps\Test\3Rivieres'
 
 parser = xml.sax.make_parser()
 try:
     wayHandler = OsmWayHandler()
     parser.setContentHandler(wayHandler)
-    parser.parse(open(name + '.xml', 'r'))
+    parser.parse(open(fname + '.xml', 'r'))
 
     print(wayHandler.result)
 
     mapHandler = OsmMapHandler(wayHandler.result)
     parser.setContentHandler(mapHandler)
-    parser.parse(open(name + '.osm', 'r'))
+    parser.parse(open(fname + '.osm', 'r'))
 
     nodeHandler = OsmNodeHandler(mapHandler.result)
     parser.setContentHandler(nodeHandler)
-    parser.parse(open(name + '.osm', 'r'))
+    parser.parse(open(fname + '.osm', 'r'))
     print(nodeHandler.result)
 except:
     pass
