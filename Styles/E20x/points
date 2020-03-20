@@ -8,6 +8,8 @@
 # and http://wiki.openstreetmap.org/wiki/Mkgmap/help/Custom_styles
 # for more information.
 
+include 'inc/name';
+
 barrier=* & bicycle=*    { set mkgmap:bicycle='${bicycle|subst:private=>no}' }
 barrier=* & foot=*       { set mkgmap:foot='${foot|subst:private=>no}' }                  
 barrier=* & hgv=*        { set mkgmap:truck='${hgv|subst:private=>no}' }                  
@@ -108,6 +110,7 @@ amenity=atm [0x2f06 resolution 24]
 #amenity=arts_centre [0x2c04 resolution 24]
 amenity=bank [0x2f06 resolution 24]
 amenity=bar [0x2d02 resolution 24]
+amenity=bench [0x4a01 resolution 24]
 amenity=biergarten [0x2d02 resolution 24]
 amenity=border_control | barrier=border_control [0x3006 resolution 20]
 amenity=bus_station [0x2f08 resolution 24]
@@ -180,7 +183,7 @@ amenity=supermarket [0x2e02 resolution 24]
 amenity=taxi [0x2f17 resolution 24]
 amenity=telephone [0x2f12 resolution 24]
 amenity=theatre [0x2d01 resolution 24]
-#amenity=toilets & tourism=information [0x2f0c resolution 24]
+amenity=toilets & tourism=information [0x2f0c resolution 24]
 amenity=toilets & fee=yes [0x4e00 resolution 22 default_name 'Wc_p']
 amenity=toilets [0x4e00 resolution 22 default_name 'Wc']
 amenity=shower  [0x4F00 resolution 22]
@@ -229,7 +232,7 @@ man_made=communications_tower | communication:radio=yes | communication:televisi
 man_made=tower & (tower:type=observation | tourism=viewpoint) [0x6411 resolution 22]
 man_made=tower & tower:type=communication [0x6411 resolution 22]
 man_made=tower & !(tower:type=bell_tower) [0x6411 resolution 22]
-# man_made=tower|landmark=chimney [0x6411 resolution 22]
+man_made=tower|landmark=chimney [0x6411 resolution 22]
 man_made=water_tower [0x6412 resolution 22]
 man_made=watermill [0x6415 resolution 24]
 #man_made=mast [0x6702 resolution 22]
@@ -264,7 +267,7 @@ railway=tram_stop [0x2f08 resolution 24]
 shop=bakers [0x2a0d resolution 24]
 shop=bakery [0x2a0d resolution 24]
 
-#shop=beauty [0x2f10 resolution 24]
+shop=beauty [0x2f10 resolution 24]
 shop=bicycle [0x2f13 resolution 24]
 #shop=boat [0x2f09 resolution 24]
 shop=butcher [0x2e00 resolution 24]
@@ -297,9 +300,9 @@ shop=supermarket [0x2e02 resolution 24]
 
 #sport=9pin [0x2d07 resolution 24]
 #sport=10pin [0x2d07 resolution 24]
-sport=airport [0x2d0b resolution 24]
-sport=multi [0x2d0a resolution 24]
-sport=skating [0x2d08 resolution 24]
+#sport=airport [0x2d0b resolution 24]
+#sport=multi [0x2d0a resolution 24]
+#sport=skating [0x2d08 resolution 24]
 sport=skiing [0x2d06 resolution 24]
 sport=swimming & access!=private [0x2d09 resolution 24]
 

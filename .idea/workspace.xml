@@ -1,90 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76baaef3-d929-4c6a-b7c1-914db155bb74" name="Default Changelist" comment="">
+    <list default="true" id="f2c7c66e-b282-478c-8e7c-144abd586d3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Scripts/ParseOsm1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDialog - Copie.wxg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Elba1.osm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Get.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Get.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poi2Gpx.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Poi2Gpx.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/CreateMapsFromOsm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/CreateMapsFromOsm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Json2Overpass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Json2Overpass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Osm2Gpx.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Osm2Gpx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/ParseOsm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/ParseOsm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Poi2Gpx.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Poi2Gpx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Tmp.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Tmp.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/makeExe.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/makeExe.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/E20x/inc/name" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/E20x/inc/name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/E20x/lines" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/E20x/lines" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/E20x_en/inc/name" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/E20x_en/inc/name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/E20x_en/lines" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/E20x_en/lines" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/E20x_en/points" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/E20x_en/points" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/Simple/name" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/Simple/name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e10/E10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/e10/abbreviations" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/e10/info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/e10/lines" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/e10/name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/e10/options" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/e10/points" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/e10/polygons" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/e10/relations" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/e10/version" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1PXmW1JI7jpjZSWHUDKb0CuTzOJ" />
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State />
-          <State>
-            <id>Python</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>PyCompatibilityInspection</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
+  <component name="ProjectId" id="1RdUbfjza1FPbQrBz4NVTOwLGAx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Scripts" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Usr\Maps\MapTools\Scripts" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.CreateMapsFromOsm">
-    <configuration name="BDialog" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="maptools" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/BDialog.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="CreateMapsFromOsm" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="maptools" />
+  <component name="RunManager">
+    <configuration name="CreateMapsFromOsm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MapTools" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -104,127 +72,9 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Json2Overpass" type="PythonConfigurationType" factoryName="Python">
-      <module name="maptools" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Json2Overpass.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="MyDialog" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="maptools" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MyDialog.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Overpass" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="maptools" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Usr\Maps\MapTools\Scripts\CreateMapsFromOsm.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Poi2Gpx" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="maptools" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/Poi2Gpx.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="bbbikeExtract" type="PythonConfigurationType" factoryName="Python">
-      <module name="maptools" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bbbikeExtract.py" />
-      <option name="PARAMETERS" value="&quot;c:\Usr\Maps\Tmp\ViaRomeaFrancigena.gpx&quot;" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Python.Json2Overpass" />
-      <item itemvalue="Python.bbbikeExtract" />
-      <item itemvalue="Python.BDialog" />
-      <item itemvalue="Python.MyDialog" />
-      <item itemvalue="Python.Overpass" />
-      <item itemvalue="Python.Poi2Gpx" />
-      <item itemvalue="Python.CreateMapsFromOsm" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.CreateMapsFromOsm" />
-        <item itemvalue="Python.Overpass" />
-        <item itemvalue="Python.Poi2Gpx" />
-        <item itemvalue="Python.BDialog" />
-        <item itemvalue="Python.MyDialog" />
       </list>
     </recent_temporary>
   </component>
@@ -233,77 +83,39 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="76baaef3-d929-4c6a-b7c1-914db155bb74" name="Default Changelist" comment="" />
-      <created>1536066831659</created>
+      <changelist id="f2c7c66e-b282-478c-8e7c-144abd586d3f" name="Default Changelist" comment="" />
+      <created>1580723401324</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1536066831659</updated>
+      <updated>1580723401324</updated>
     </task>
-    <task id="LOCAL-00001" summary="initial version">
-      <created>1536067201540</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1536067201540</updated>
-    </task>
-    <task id="LOCAL-00002" summary="minor">
-      <created>1536302923035</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1536302923036</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial version" />
-    <MESSAGE value="minor" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Scripts/CreateMapsFromOsm.py</url>
-          <line>36</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-      <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
-        </breakpoint>
-      </default-breakpoints>
-    </breakpoint-manager>
+  <component name="WindowStateProjectService">
+    <state x="740" y="337" key="FileChooserDialogImpl" timestamp="1583240025278">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="740" y="337" key="FileChooserDialogImpl/0.0.1920.1160/-1920.0.1920.1160@0.0.1920.1160" timestamp="1583240025278" />
+    <state x="740" y="337" key="FileChooserDialogImpl/0.0.1920.1160/-1920.0.1920.1200@0.0.1920.1160" timestamp="1581318925135" />
+    <state width="1898" height="309" key="GridCell.Tab.0.bottom" timestamp="1580727285537">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1898" height="309" key="GridCell.Tab.0.bottom/0.0.1920.1160/-1920.0.1920.1200@0.0.1920.1160" timestamp="1580727285537" />
+    <state width="1898" height="309" key="GridCell.Tab.0.center" timestamp="1580727285537">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1898" height="309" key="GridCell.Tab.0.center/0.0.1920.1160/-1920.0.1920.1200@0.0.1920.1160" timestamp="1580727285537" />
+    <state width="1898" height="309" key="GridCell.Tab.0.left" timestamp="1580727285537">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1898" height="309" key="GridCell.Tab.0.left/0.0.1920.1160/-1920.0.1920.1200@0.0.1920.1160" timestamp="1580727285537" />
+    <state width="1898" height="309" key="GridCell.Tab.0.right" timestamp="1580727285537">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1898" height="309" key="GridCell.Tab.0.right/0.0.1920.1160/-1920.0.1920.1200@0.0.1920.1160" timestamp="1580727285537" />
+    <state x="771" y="498" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580723669299">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="771" y="498" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160/-1920.0.1920.1200@0.0.1920.1160" timestamp="1580723669299" />
   </component>
 </project>

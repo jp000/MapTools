@@ -1,7 +1,7 @@
 # Rules for naming objects, based on the following tags:
 # name, brand, operator, ref
 
-name=* { set name='${name:fr}' | '${name:en}' | '${name:de}' | '${name:it}' | '${name}' }
+#name=* { set name='${name:fr}' | '${name:en}' | '${name:de}' | '${name:it}' | '${name}' }
 
 # None of operator, brand given
 ref=* & (operator!=* & brand!=*) { name '${ref} ${name}' | '${ref}' }
