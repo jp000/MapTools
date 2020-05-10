@@ -1,0 +1,26 @@
+C:\Usr\Maps\MapTools\Scripts>python CreateMapsFromOsm.py
+Created .\Tmp.dat
+data=[out:xml][timeout:600][maxsize:2147483648];node(-58.0,-180.0,0.0,180.0)[population](if: t["population"] >= 1000000);out body;
+Execute "C:\usr\bin\wget.exe" -O ".\Cities1.osm" --post-file=".\Tmp.dat" https://lz4.overpass-api.de/api/interpreter
+Created .\Cities1.osm
+Created .\Tmp.dat
+data=[out:xml][timeout:600][maxsize:2147483648];node(0.0,-180.0,40.0,180.0)[population](if: t["population"] >= 1000000);out body;
+Execute "C:\usr\bin\wget.exe" -O ".\Cities2.osm" --post-file=".\Tmp.dat" https://lz4.overpass-api.de/api/interpreter
+Created .\Cities2.osm
+Created .\Tmp.dat
+data=[out:xml][timeout:600][maxsize:2147483648];node(40.0,-180.0,83.0,180.0)[population](if: t["population"] >= 1000000);out body;
+Execute "C:\usr\bin\wget.exe" -O ".\Cities3.osm" --post-file=".\Tmp.dat" https://lz4.overpass-api.de/api/interpreter
+Created .\Cities3.osm
+Execute java -Xmx4000m -jar "C:\Usr\Maps\mkgmap\mkgmap.jar" -c "C:\Usr\Maps\MapTools\Styles\config.cfg" --poi-excl-index=0x2a13,0x2b05,0x2b06,0x2c0d,0x2e0c,0x6619,0x2800  --style-file="C:\Usr\Maps\Map
+Tools\Styles\e20x" --family-id=1000 --product-id=1 --mapname=99990000  --description="E20_Cities" --output-dir="C:\Usr\Maps\output" ".\Cities1.osm" ".\Cities2.osm" ".\Cities3.osm" "C:\Usr\Maps\MapTool
+s\Styles\e20x.typ"
+Created C:\Usr\Maps\output\E20_Cities.img from C:\Usr\Maps\output\gmapsupp.img
+Created .\Tmp.dat
+data=[out:xml][timeout:600][maxsize:2147483648];node[population](if: t["population"] >= 1000000);out body;
+Execute "C:\usr\bin\wget.exe" -O ".\City.osm" --post-file=".\Tmp.dat" https://lz4.overpass-api.de/api/interpreter
+Created .\City.osm
+Execute java -Xmx4000m -jar "C:\Usr\Maps\mkgmap\mkgmap.jar" -c "C:\Usr\Maps\MapTools\Styles\config.cfg" --poi-excl-index=0x2a13,0x2b05,0x2b06,0x2c0d,0x2e0c,0x6619,0x2800  --style-file="C:\Usr\Maps\Map
+Tools\Styles\e20x" --family-id=1000 --product-id=1 --mapname=99990000  --description="E20_City" --output-dir="C:\Usr\Maps\output" ".\City.osm" "C:\Usr\Maps\MapTools\Styles\e20x.typ"
+Created C:\Usr\Maps\output\E20_City.img from C:\Usr\Maps\output\gmapsupp.img
+
+C:\Usr\Maps\MapTools\Scripts>

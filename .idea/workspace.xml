@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="76baaef3-d929-4c6a-b7c1-914db155bb74" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyDialog - Copie.wxg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/CreateMapsFromOsm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/CreateMapsFromOsm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Json2Overpass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Json2Overpass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Osm2Gpx.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Osm2Gpx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Poi2Gpx.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Poi2Gpx.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Tmp.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Tmp.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/E20x/inc/name" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/E20x/inc/name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/E20x/points" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/E20x/points" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/test/info" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/test/info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/test/version" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/test/version" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

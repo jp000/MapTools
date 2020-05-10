@@ -1,9 +1,12 @@
 data=[out:xml][timeout:900][maxsize:1073741824];
-rel["name"~"GR 5", i][type=route][route~'hiking|foot'](43.6490,6.4380,46.375068,7.5696);
+area[name="Briançon"][type=boundary][boundary=administrative][admin_level=8] -> .a1;
+area[name="Menton"][type=boundary][boundary=administrative][admin_level=8] -> .a2;
+area[name="Nice"][type=boundary][boundary=administrative][admin_level=8] -> .a3;
+rel[~"ref|name"~"GR 5[25BC]?$",i][type=route][route~'hiking|foot'](43.6490,6.4380,46.375068,7.5696);
 (
- way(r)(43.6490,6.4380,46.375068,7.5696);
- node(w)(43.6490,6.4380,46.375068,7.5696);
- node(around:1000)(43.6490,6.4380,46.375068,7.5696);
- <;
+ (way(r)(43.6490,6.4380,46.375068,7.5696); node(w); node(around:1000); <;);
+ (node(area.a1);<;<<;);
+ (node(area.a2);<;<<;);
+ (node(area.a3);<;<<;);
 ); 
 out body;

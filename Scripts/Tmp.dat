@@ -1,0 +1,1 @@
+data=[out:xml][timeout:800][maxsize:2147483648];node[population](if: t["place~"city|town|village"][population~"^[0-9]+$"](if: t["population"] >= 5000000);out body;

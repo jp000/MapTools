@@ -1,6 +1,8 @@
 data=[out:xml];
 rel[~"ref|name"~"Tour des Dents du Midi",i][type=route][route~"hiking|foot"] -> .a;
+rel[~"ref|name"~"Tour des Dents Blanches",i][type=route][route~"hiking|foot"] -> .b;
 (
-    (.a >>; way(r);node(w);node(around:400);<;);
+    (.a >>; way(r);node(w);node(around:300);<;);
+    (.b >>; way(r);node(w);node(around:300);<;);
 );
 out body;

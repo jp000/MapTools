@@ -11,6 +11,8 @@
 # and http://wiki.openstreetmap.org/wiki/Mkgmap/help/Custom_styles
 # for more information.
 
+include 'inc/name';
+
 # Names of administrative boundaries.
 # We could want to sort the relations in ascending order of admin_level
 # and alphabetically by name first.

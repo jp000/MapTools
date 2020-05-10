@@ -8,11 +8,47 @@
 # and http://wiki.openstreetmap.org/wiki/Mkgmap/help/Custom_styles
 # for more information.
 
+include 'inc/name';
+
+abandoned=yes {deletealltags}  # old, depreciated, ambiguous, method of handling abandoned
+
 aeroway=runway [0x27 resolution 20]
 aeroway=taxiway [0x27 resolution 24]
 
+route_bus=* {set route_bus='[${route_bus}]' }
+route_bik=* {set route_bik='(${route_bik})' }
+route_hik=* {set route_hik='${route_hik}' }
+
+#this can be adapted/removed to show the relations at lower resolution
+#route_hik ~ '.*(?i)(gr|e).*' {name '${route_hik}'} [0x07 road_class=0  resolution 16]
+#route_hik ~ '(2|4)' {name '${route_hik}'} [0x07 road_class=0  resolution 16]
+route_hik=* {name '${route_hik}'} [0x07 road_class=0  resolution 16]
+
+route_bus=* {
+ set name =
+    '${route_hik},${route_bik},${route_bus},${name}'
+    | '${route_hik},${route_bik},${route_bus}'
+    | '${route_bik},${route_bus},${name}'
+    | '${route_bik},${route_bus}'
+    | '${route_hik},${route_bus},${name}'
+    | '${route_hik},${route_bus}'
+    | '${route_bus},${name}'
+    | '${route_bus}'
+}
+
+route_bus!=* & (route_hik=* | route_bik=*) {
+ set name =
+    '${route_hik},${route_bik},${name}'
+    | '${route_hik},${route_bik}'
+    | '${route_hik},${name}'
+    | '${route_hik}'
+    | '${route_bik},${name}'
+    | '${route_bik}'
+}
+
+
 # Assign the street name for house number search
-highway=* & name=* { set mkgmap:street='${name}' }
+#highway=* & name=* { set mkgmap:street='${name}' }
 
 # Mark highways with the toll flag
 highway=* & (toll=yes|toll=true) { set mkgmap:toll=yes }

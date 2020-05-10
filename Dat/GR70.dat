@@ -1,0 +1,8 @@
+data=[out:xml];
+area[name="Alès"][type=boundary][boundary=administrative][admin_level=8] -> .a1;
+rel[~"ref|name"~"STV-70", i][type=route][route~"hiking|foot"] -> .r1;
+(
+ (.r1 >>; way(r);node(w);node(around:1000);<;);
+ (node(area.a1);<;<<;);
+); 
+out body;

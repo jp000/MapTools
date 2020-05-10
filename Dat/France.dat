@@ -1,0 +1,7 @@
+data=[out:xml][timeout:900];
+
+rel[~"ref|name"~"GR [0-9]",i][type=route][route~"hiking|foot"](42.14711,-6.37207,51.37178,10.87646) -> .a;
+(
+    (.a >>; way(r);node(w);node(around:50);<;);
+);
+out body;

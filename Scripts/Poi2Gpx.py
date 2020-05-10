@@ -20,17 +20,23 @@ def processPoi(filename):
       </metadata>
     '''
     template2 = '''<wpt lat="{1:.5f}" lon="{2:.5f}">
-        <ele>{3:.1f}</ele>
         <time>{0}</time>
-        <name>{4}</name>
-        <cmt>{5}</cmt>
-        <sym>{6}</sym>
+        <name>{3}</name>
+        <cmt>{4}</cmt>
+        <sym>{5}</sym>
         <extensions>
             <gpxx:WaypointExtension>
-                <gpxx:Proximity>{7}</gpxx:Proximity>
+                <gpxx:Proximity>{6}</gpxx:Proximity>
                 <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
             </gpxx:WaypointExtension>
         </extensions>
+      </wpt>
+    '''
+    template20 = '''<wpt lat="{1:.5f}" lon="{2:.5f}">
+        <time>{0}</time>
+        <name>{3}</name>
+        <cmt>{4}</cmt>
+        <sym>{5}</sym>
       </wpt>
     '''
     template3 = '</gpx>'
@@ -59,16 +65,19 @@ def processPoi(filename):
                     if cmt == '':
                         cmt = getattr(feature.properties, 'info', '')
                 symbol = getattr(feature.properties, 'marker-symbol', '')
+                alarm = getattr(feature.properties, 'alarm', '')
                 if symbol == '':
                     symbol = 'Waypoint'
                 name = getattr(feature.properties, 'name', '')
                 if name == '':
                     name = '{:03d}'.format(nameIdx)
                     nameIdx += 1
-                fp.write(template2.format(dt, feature.geometry.coordinates[1], feature.geometry.coordinates[0], 0,
-                                          name,
-                                          cmt,
-                                          symbol, 100))
+                if alarm:
+                    fp.write(template2.format(dt, feature.geometry.coordinates[1], feature.geometry.coordinates[0],
+                                          name, cmt, symbol, alarm))
+                else:
+                    fp.write(template20.format(dt, feature.geometry.coordinates[1], feature.geometry.coordinates[0],
+                                          name, cmt, symbol))
         fp.write(template3)
         print('Created: {}'.format(outputName))
 

@@ -8,6 +8,10 @@
 # and http://wiki.openstreetmap.org/wiki/Mkgmap/help/Custom_styles
 # for more information.
 
+include 'inc/name';
+
+abandoned=yes {deletealltags}  # old, depreciated, ambiguous, method of handling abandoned
+
 aeroway=runway [0x27 resolution 20]
 aeroway=taxiway [0x27 resolution 24]
 
