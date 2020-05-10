@@ -63,7 +63,7 @@ def doOverpass(outputfilename, query, server=servers[1], bForce=False, bbox=None
     else:
         # data=[bbox];node[amenity=post_box];out body;&bbox=6.4380,43.6490,7.5696,46.375068 (w,s,e,n)
         data = f'data=[out:xml][timeout:900][maxsize: 2147483648][bbox];{quote(query)}&bbox={bbox}'
-    
+
     with open(tmp, 'w', encoding='utf-8') as fp:
         fp.writelines(data)
         print(f'Created {tmp}')
@@ -175,10 +175,10 @@ def mkgmapTest(inputfilename,
 
         if type(inputfilename) is list or type(inputfilename) is tuple:
             inputfilename = f' '.join([f'"{x}"' for x in inputfilename])
-        else:
+    else:
             inputfilename = f'"{inputfilename}"'
         mapName = f'--mapname={mapId} '
-        
+
     route = '--route ' if hasRoute else ''
 
     cmd = fr'java {javaOptions} -jar "{javaJar}" -c "{options}" {route} {mapName} --description="{mapDescription}" --output-dir="{outputDir}" {inputfilename}'
@@ -337,11 +337,11 @@ def GeoFabrik():
                 print(f'from {startId} to {lastId} {entry[3]}')
 
     if False:
-        lastId, startId = 0, 0
-        for entry in lst:
-            if entry[0] != 0:
+    lastId, startId = 0, 0
+    for entry in lst:
+        if entry[0] != 0:
                 lastId, startId = ProcessGeoFabrik(entry[2], entry[3], entry[1] + 9000, 'E10')
-                print(f'from {startId} to {lastId} {entry[3]}')
+            print(f'from {startId} to {lastId} {entry[3]}')
 
 
 def make_Bbox(nbr, minLat=-90.0, minLon=-180.0, maxLat=90.0, maxLon=180.0):
@@ -551,7 +551,7 @@ if __name__ == '__main__':
         q1 = '''(
             area[name="Fribourg/Freiburg"][boundary=administrative][admin_level=4]; 
             area[name="District de la Broye-Vully"][type=boundary][boundary=administrative][admin_level=6]; 
-            area[name="District de la Riviera-Pays-dâ€™Enhaut"][type=boundary][boundary=administrative][admin_level=6]; 
+            area[name="District de la Riviera-Pays-d’Enhaut"][type=boundary][boundary=administrative][admin_level=6]; 
             area[name="District d'Aigle"][type=boundary][boundary=administrative][admin_level=6];
             area[name="Monthey"][type=boundary][boundary=administrative][admin_level=6];
             area[name="Saint-Maurice"][type=boundary][boundary=administrative][admin_level=6];
@@ -572,7 +572,7 @@ if __name__ == '__main__':
     if False:
         # https://extract.bbbike.org?sw_lng=13.215&sw_lat=41.951&ne_lng=19.964&ne_lat=46.231&format=osm.pbf&coords=14.962%2C43.213%7C17.114%2C42.102%7C19.86%2C41.951%7C19.964%2C42.825%7C17.575%2C44.192%7C14.373%2C46.231%7C13.215%2C45.478%7C13.979%2C44.309&city=Yougoslavie&lang=en
         template = mkgsplit(os.path.join(dnldDir, 'planet_15.731_43.069_8e27d44d.osm.pbf'), description='Yougoslavie',
-                            mapId=93850000)
+             mapId=93850000)
         if template is not None:
             mkgmap(template, styleDir=sty, typeFile=typ, mapDescription='E20_Yougoslavie')
 

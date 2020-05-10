@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/maptools.iml" filepath="$PROJECT_DIR$/.idea/maptools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MapTools.iml" filepath="$PROJECT_DIR$/.idea/MapTools.iml" />
     </modules>
   </component>
 </project>

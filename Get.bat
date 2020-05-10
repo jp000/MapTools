@@ -72,7 +72,7 @@ c:\usr\bin\wget -O "%osmname%" --post-file="%sname%.dat" %server%
 :SkipGet1
 @if skiptype == 1 set type=""
 @set opts1=%opts1% %opts2% %opts3%
-java -Xmx6000m -jar "..\mkgmap\mkgmap.jar" %opts% %style% %opts1% --output-dir="%output%\%sname%" ".\%osmname%" %type%
+java -Xmx6000m -jar "c:\Usr\Maps\mkgmap\mkgmap.jar" %opts% %style% %opts1% --output-dir="%output%\%sname%" ".\%osmname%" %type%
 
 @if not errorlevel 0 goto error3
 @copy /B "%output%\%sname%\gmapsupp.img" "%output%\%sname%\gmapbmap.img" >NUL 2>&1

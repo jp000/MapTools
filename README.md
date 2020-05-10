@@ -28,7 +28,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>MapTools/README.md at bf4df19fbfcf5c4dae997c81ae254b50219e91da · jp000/MapTools</title>
+  <title>MapTools/README.md at bf4df19fbfcf5c4dae997c81ae254b50219e91da � jp000/MapTools</title>
     <meta name="description" content="Tools for working with Garmin&#39;s Etrex10. Contribute to jp000/MapTools development by creating an account on GitHub.">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -152,13 +152,13 @@
           data-hotkey="s,/"
           name="q"
           value=""
-          placeholder="Search or jump to…"
-          data-unscoped-placeholder="Search or jump to…"
-          data-scoped-placeholder="Search or jump to…"
+          placeholder="Search or jump to�"
+          data-unscoped-placeholder="Search or jump to�"
+          data-scoped-placeholder="Search or jump to�"
           autocapitalize="off"
           aria-autocomplete="list"
           aria-controls="jump-to-results"
-          aria-label="Search or jump to…"
+          aria-label="Search or jump to�"
           data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=/AsxyATs4dBrN1P6WPXVHMS7APNtZGSPA90OLIoDvsNrqgydS7pMt4Zij7blhVpknMFuQ8s4UNVag50g6+a2eQ=="
           spellcheck="false"
           autocomplete="off"
@@ -191,12 +191,12 @@
       <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
         All GitHub
       </span>
-      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">?</span>
     </div>
 
     <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
       Jump to
-      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+      <span class="d-inline-block ml-1 v-align-middle">?</span>
     </div>
   </a>
 </li>
@@ -232,12 +232,12 @@
       <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
         All GitHub
       </span>
-      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">?</span>
     </div>
 
     <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
       Jump to
-      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+      <span class="d-inline-block ml-1 v-align-middle">?</span>
     </div>
   </a>
 </li>
@@ -264,12 +264,12 @@
       <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
         All GitHub
       </span>
-      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">?</span>
     </div>
 
     <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
       Jump to
-      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+      <span class="d-inline-block ml-1 v-align-middle">?</span>
     </div>
   </a>
 </li>
@@ -346,7 +346,7 @@
     <div class="Header-item position-relative d-none d-lg-flex">
       <details class="details-overlay details-reset">
   <summary class="Header-link"
-      aria-label="Create new…"
+      aria-label="Create new�"
       data-ga-click="Header, create new, icon:add">
     <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"/></svg> <span class="dropdown-caret"></span>
   </summary>
@@ -479,7 +479,7 @@
                   <div class="float-left col-6">
                       <button type="button" value=":palm_tree:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
                         <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
-                          <g-emoji alias="palm_tree" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f334.png">🌴</g-emoji>
+                          <g-emoji alias="palm_tree" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f334.png">??</g-emoji>
                         </div>
                         <div class="d-flex flex-items-center no-underline js-predefined-user-status-message ws-normal text-left" style="border-left: 1px solid transparent">
                           On vacation
@@ -487,7 +487,7 @@
                       </button>
                       <button type="button" value=":face_with_thermometer:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
                         <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
-                          <g-emoji alias="face_with_thermometer" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f912.png">🤒</g-emoji>
+                          <g-emoji alias="face_with_thermometer" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f912.png">??</g-emoji>
                         </div>
                         <div class="d-flex flex-items-center no-underline js-predefined-user-status-message ws-normal text-left" style="border-left: 1px solid transparent">
                           Out sick
@@ -497,7 +497,7 @@
                   <div class="float-left col-6">
                       <button type="button" value=":house:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
                         <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
-                          <g-emoji alias="house" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3e0.png">🏠</g-emoji>
+                          <g-emoji alias="house" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3e0.png">??</g-emoji>
                         </div>
                         <div class="d-flex flex-items-center no-underline js-predefined-user-status-message ws-normal text-left" style="border-left: 1px solid transparent">
                           Working from home
@@ -505,7 +505,7 @@
                       </button>
                       <button type="button" value=":dart:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
                         <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
-                          <g-emoji alias="dart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3af.png">🎯</g-emoji>
+                          <g-emoji alias="dart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3af.png">??</g-emoji>
                         </div>
                         <div class="d-flex flex-items-center no-underline js-predefined-user-status-message ws-normal text-left" style="border-left: 1px solid transparent">
                           Focusing
@@ -1205,7 +1205,7 @@ You can also use this script to help the creation of POI files(.gpx or .csv) to 
     <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
       <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
     </button>
-    You can’t perform that action at this time.
+    You can�t perform that action at this time.
   </div>
 
 
